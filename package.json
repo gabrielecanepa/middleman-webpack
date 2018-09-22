@@ -4,5 +4,10 @@
   "description": "Scalable Middleman 4 template with Sass, yarn, webpack, Babel, ESLint and modern best practices.",
   "repository": "https://github.com/gabrielecanepa/middleman-template",
   "author": "Gabriele Canepa <gabriele@canepa.io>",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^5.6.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  }
 }
