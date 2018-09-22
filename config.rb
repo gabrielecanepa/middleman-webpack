@@ -5,6 +5,14 @@ activate :autoprefixer do |prefix|
   prefix.browsers = "last 2 versions"
 end
 
+activate :livereload
+
+activate :external_pipeline,
+          name: :webpack,
+          command: build? ? "yarn run build" : "yarn run start",
+          source: "dist",
+          latency: 1
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
