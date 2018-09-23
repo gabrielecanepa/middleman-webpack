@@ -6,4 +6,10 @@ task :rubocop do
   system 'rubocop'
 end
 
+namespace :middleman do
+  task :build do
+    system 'bundle exec middleman build'
+  end
+end
+
 task default: %i[eslint rubocop]
