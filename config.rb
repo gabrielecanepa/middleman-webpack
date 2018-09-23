@@ -1,3 +1,7 @@
+set :css_dir,     'assets/stylesheets'
+set :js_dir,      'assets/javascripts'
+set :images_dir,  'assets/images'
+
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
@@ -49,8 +53,8 @@ page '/*.txt', layout: false
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
 configure :development do
-  activate :livereload
   set :debug_assets, true
+  activate :livereload
 end
 
 configure :build do
