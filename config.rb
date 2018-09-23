@@ -62,7 +62,7 @@ configure :build do
   activate :favicon_maker do |f|
     f.template_dir  = 'source/images'
     f.icons = {
-      "logo.svg" => [
+      "_favicon.svg" => [
         { icon: "apple-touch-icon-180x180-precomposed.png" },
         { icon: "apple-touch-icon-152x152-precomposed.png" },
         { icon: "apple-touch-icon-144x144-precomposed.png" },
