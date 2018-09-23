@@ -58,13 +58,13 @@ configure :development do
 end
 
 configure :build do
-  ignore 'javascripts/*' # handled by webpack
+  ignore 'assets/javascripts/*' # handled by webpack
   set :relative_links, true
   activate :minify_html
   activate :minify_css
   activate :minify_javascript
   activate :favicon_maker do |f|
-    f.template_dir = 'source/images'
+    f.template_dir = 'source/assets/images'
     f.icons = {
       '_favicon.svg' => [
         { icon: 'apple-touch-icon-180x180-precomposed.png' },

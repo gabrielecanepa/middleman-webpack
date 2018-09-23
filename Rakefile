@@ -1,5 +1,5 @@
 task :eslint do
-  system 'node_modules/.bin/eslint source/javascripts/*.js'
+  system 'node_modules/.bin/eslint source/assets/javascripts/*.js'
 end
 
 task :rubocop do
