@@ -5,13 +5,13 @@ activate :autoprefixer do |prefix|
   prefix.browsers = 'last 2 versions'
 end
 
-activate :livereload
-
 activate :external_pipeline,
          name:     :webpack,
          command:  build? ? 'yarn run build' : 'yarn run start',
          source:   'dist',
          latency:  1
+
+set :relative_links, true
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/
@@ -48,7 +48,14 @@ page '/*.txt', layout: false
 # Build-specific configuration
 # https://middlemanapp.com/advanced/configuration/#environment-specific-settings
 
+configure :development do
+  activate :livereload
+  set :debug_assets, true
+end
+
 configure :build do
+  activate :minify_html
   activate :minify_css
   activate :minify_javascript
+  ignore 'javascripts/*'
 end
