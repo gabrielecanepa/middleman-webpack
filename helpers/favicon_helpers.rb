@@ -1,7 +1,6 @@
-# Helper methods that will be accessible within any view
-module CustomHelpers
+module FaviconHelpers
   def favicon_tags
-    @favicons = ""
+    @favicons = ''
     favicon_tags = [
       '<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180-precomposed.png">',
       '<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152-precomposed.png">',
@@ -13,6 +12,6 @@ module CustomHelpers
       '<link rel="icon" type="image/ico" href="favicon.ico">'
     ]
     favicon_tags.map { |favicon_tag| @favicons << favicon_tag + "\n" }
-    return @favicons
+    @favicons
   end
 end
