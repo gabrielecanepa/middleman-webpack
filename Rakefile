@@ -20,14 +20,14 @@ namespace :middleman do
     if system 'git remote -v &>/dev/null'
       remote = `git config --get remote.origin.url`
       unless ARGV[1] == 'no-build'
-        puts '🏗 Building application'
+        puts '🏗 Building project'
         system 'rake middleman:build'
       end
       `git branch -f gh-pages`
       `git add .`
       `git commit -m 'Automated Middleman deploy commit #{Time.now.strftime 'on %-d %b %Y at %H:%M:%S'}'`
       system 'git subtree push --prefix build origin gh-pages'
-      puts "✔️  Website successfully published at https://#{remote.gsub('git@github.com:', '').gsub('/', '.github.io/')}"
+      puts "🚀 Website successfully published at https://#{remote.gsub('git@github.com:', '').gsub('/', '.github.io/') + '!'}"
     else
       puts '⚠️ ERROR: You must set a remote before deploying'
     end
