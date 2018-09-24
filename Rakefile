@@ -23,8 +23,7 @@ namespace :middleman do
       `git add .`
       `git commit -m 'Automated Middleman deploy commit #{Time.now.strftime 'on %-d %b %Y at %H:%M:%S'}'`
       system 'git subtree push --prefix build origin gh-pages'
-      print "✔️ Website successfully published at https://#{remote.gsub('git@github.com:', '').gsub(':', '.github.io/')}"
-      print '!'
+      puts "✔️  Website successfully published at https://#{remote.gsub('git@github.com:', '').gsub(':', '.github.io/')}!"
     else
       puts '⚠️ ERROR: You must set a remote before deploying'
     end
