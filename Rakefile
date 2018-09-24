@@ -1,3 +1,5 @@
+require 'ruby-progressbar'
+
 desc 'Check style in your JavaScript files with ESLint'
 task :eslint do
   system 'node_modules/.bin/eslint source/assets/javascripts/*.js'
@@ -16,17 +18,22 @@ namespace :middleman do
 
   desc 'Deploy Middleman application on GitHub Pages'
   task :deploy do
-    ARGV.each { |a| task a.to_sym do ; end }
+    ARGV.each { |a| task a.to_sym { ; } }
+    remotes_bar = ProgressBar.create(title: 'Looking for remotes', progress_mark: '.', format: '%t%B')
+    10.times { remotes_bar.increment; sleep 0.25 }
     if system 'git remote -v &>/dev/null'
+      remotes_bar.increment
       remote = `git config --get remote.origin.url`
       gh_pages_url = "https://#{remote.gsub('git@github.com:', '').gsub('/', '.github.io/')}"
       `git branch -f gh-pages`
       unless ARGV[1] == 'no-build'
-        ProgressBar.create(title: '🏗  Building project', starting_at: 0, total: 10, progress_mark: '.')
+        building_bar = ProgressBar.create(title: '🏗  Building project', progress_mark: '.', format: '%t%B')
+        10.times { building_bar.increment; sleep 0.25 }
+        puts '🏗  Building project..........'
         system 'rake middleman:build'
         `git add build`
-        `git commit -m 'Automated Middleman deploy commit #{Time.now.strftime 'on %-d %b %Y at %H:%M:%S'}'`
-        `git push origin master`
+        `git commit -m 'Automated Middleman deploy commit #{Time.now.strftime 'on %-d %b %Y at %H:%M:%S'}' &>/dev/null`
+        `git push origin master &>/dev/null`
       end
       system 'git subtree push --prefix build origin gh-pages'
       puts "🚀 Website successfully published at #{gh_pages_url}"
