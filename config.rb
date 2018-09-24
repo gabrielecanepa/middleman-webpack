@@ -1,4 +1,4 @@
-Dir["lib/*.rb"].each {|file| require file }
+Dir['lib/*.rb'].each { |file| require file }
 
 set :css_dir,     'assets/stylesheets'
 set :images_dir,  'assets/images'
