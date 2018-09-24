@@ -11,10 +11,9 @@ namespace :middleman do
     system 'bundle exec middleman build'
   end
 
-  task :deploy, [:build] do |_task, args|
+  task :deploy do
     if system 'git remote -v &>/dev/null'
-      system 'rake middleman:build' if args.build.inspect == 'build'
-      # system 'git checkout -b gh-pages' unless system 'git checkout gh-pages &>/dev/null'
+      system 'rake middleman:build'
       system 'git branch -f gh-pages'
       system 'git add .'
       system "git commit -m 'Automated Middleman deploy commit #{Time.now.strftime 'on %-d %b %Y at %H:%M:%S'}'"
