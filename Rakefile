@@ -17,12 +17,13 @@ namespace :middleman do
   desc 'Deploy Middleman application on GitHub Pages'
   task :deploy do
     if system 'git remote -v &>/dev/null'
-      `rake middleman:build`
+      # system 'rake middleman:build'
       `git branch -f gh-pages`
-      `git add . &>/dev/null`
-      `git commit -m 'Automated Middleman deploy commit #{Time.now.strftime 'on %-d %b %Y at %H:%M:%S'}' &>/dev/null`
-      `git subtree push --prefix build origin gh-pages`
-      printf "✔️ Website successfully published at https://#{`git config --get remote.origin.url`}!"
+      `git add .`
+      `git commit -m 'Automated Middleman deploy commit #{Time.now.strftime 'on %-d %b %Y at %H:%M:%S'}'`
+      system 'git subtree push --prefix build origin gh-pages'
+      print "✔️ Website successfully published at https://#{`git config --get remote.origin.url`.slice('git@').gsub(':', '/')}"
+      print '!'
     else
       puts '⚠️ ERROR: You must set a remote before deploying'
     end
