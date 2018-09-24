@@ -19,7 +19,10 @@ namespace :middleman do
     ARGV.each { |a| task a.to_sym do ; end }
     if system 'git remote -v &>/dev/null'
       remote = `git config --get remote.origin.url`
-      system 'rake middleman:build' unless ARGV[1] == 'no-build'
+      unless ARGV[1] == 'no-build'
+        puts '🚀 Building application'
+        system 'rake middleman:build'
+      end
       `git branch -f gh-pages`
       `git add .`
       `git commit -m 'Automated Middleman deploy commit #{Time.now.strftime 'on %-d %b %Y at %H:%M:%S'}'`
