@@ -15,10 +15,10 @@ namespace :middleman do
     if system 'git remote -v &>/dev/null'
       system 'rake middleman:build'
       system 'git branch -f gh-pages'
-      system 'git add .'
-      system "git commit -m 'Automated Middleman deploy commit #{Time.now.strftime 'on %-d %b %Y at %H:%M:%S'}'"
+      system 'git add . &>/dev/null'
+      system "git commit -m 'Automated Middleman deploy commit #{Time.now.strftime 'on %-d %b %Y at %H:%M:%S'}' &>/dev/null"
       system 'git subtree push --prefix build origin gh-pages'
-      system '✅ Website successfully published!'
+      puts '✅ Website successfully published!'
     else
       puts '⚠️ ERROR: You must set a remote before deploying'
     end

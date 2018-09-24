@@ -9,8 +9,8 @@ gem 'middleman-minify-html',      '~> 3.4.1'
 gem 'middleman-pry',              '~> 1.0.2'
 
 group :development do
-  gem 'rake'
-  gem 'rubocop', require: false
+  gem 'rake',     require: false
+  gem 'rubocop',  require: false
 end
 
 # -- NEEDS FIX -- not yet compatible with Middleman 4.x
