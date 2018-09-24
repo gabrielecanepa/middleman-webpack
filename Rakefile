@@ -16,9 +16,10 @@ namespace :middleman do
 
   desc 'Deploy Middleman application on GitHub Pages'
   task :deploy do
+    ARGV.each { |a| task a.to_sym do ; end }
     if system 'git remote -v &>/dev/null'
       remote = `git config --get remote.origin.url`
-      system 'rake middleman:build'
+      system 'rake middleman:build' unless ARGV[1] == 'no-build'
       `git branch -f gh-pages`
       `git add .`
       `git commit -m 'Automated Middleman deploy commit #{Time.now.strftime 'on %-d %b %Y at %H:%M:%S'}'`
