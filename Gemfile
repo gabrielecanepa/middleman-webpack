@@ -14,4 +14,4 @@ group :development do
 end
 
 # -- NEEDS FIX -- not yet compatible with Middleman 4.x
-# gem 'middleman-deploy',         '~> 1.0.0' # FIXME: waiting for new release
+# gem 'middleman-deploy',         '~> 1.0.0' # use `rake middleman:deploy [no-build]` instead

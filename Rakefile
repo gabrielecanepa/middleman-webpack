@@ -22,7 +22,7 @@ namespace :middleman do
       gh_pages_url = "https://#{remote.gsub('git@github.com:', '').gsub('/', '.github.io/')}"
       `git branch -f gh-pages`
       unless ARGV[1] == 'no-build'
-        puts '🏗  Building project'
+        ProgressBar.create(title: '🏗  Building project', starting_at: 0, total: 10, progress_mark: '.')
         system 'rake middleman:build'
         `git add build`
         `git commit -m 'Automated Middleman deploy commit #{Time.now.strftime 'on %-d %b %Y at %H:%M:%S'}'`
