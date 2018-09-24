@@ -9,13 +9,14 @@ activate :autoprefixer do |prefix|
   prefix.browsers = 'last 2 versions'
 end
 
+activate :directory_indexes
+activate :dotenv
+
 activate :external_pipeline,
          name:     :webpack,
          command:  build? ? 'yarn run build' : 'yarn run start',
          source:   'dist',
          latency:  1
-
-activate :dotenv
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/
@@ -60,6 +61,8 @@ end
 configure :build do
   ignore 'assets/javascripts/*' # handled by webpack
   set :relative_links, true
+  activate :asset_hash
+  activate :relative_assets
   activate :minify_html
   activate :minify_css
   activate :minify_javascript
