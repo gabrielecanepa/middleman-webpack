@@ -22,16 +22,11 @@ namespace :middleman do
       system  'git add . &>/dev/null'
       system  "git commit -m 'Automated Middleman deploy commit #{Time.now.strftime 'on %-d %b %Y at %H:%M:%S'}' &>/dev/null"
       system  'git subtree push --prefix build origin gh-pages'
-      puts    "✔️ Website successfully published at #{system 'git config --get remote.origin.url'}!"
+      puts    "✔️ Website successfully published at #{`git config --get remote.origin.url`}!"
     else
       puts    '⚠️ ERROR: You must set a remote before deploying'
     end
   end
-end
-
-task :test do
-  remote = system 'git config --get remote.origin.url'
-  puts remote
 end
 
 task default: %i[eslint rubocop]
