@@ -20,7 +20,7 @@ namespace :middleman do
     if system 'git remote -v &>/dev/null'
       remote = `git config --get remote.origin.url`
       unless ARGV[1] == 'no-build'
-        puts '🚀 Building application'
+        puts '🏗 Building application'
         system 'rake middleman:build'
       end
       `git branch -f gh-pages`
