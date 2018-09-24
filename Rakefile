@@ -12,11 +12,14 @@ namespace :middleman do
   end
 
   task :deploy do
-    puts 'Fetching origin...'
-    sleep 1
-    if system 'git remote -v'
+    if system 'git remote -v &>/dev/null'
       system 'rake middleman:build'
       system 'git checkout -b gh-pages' unless system 'git checkout gh-pages &>/dev/null'
+      system 'git add .'
+      system "git commit -m 'Automated Middleman deploy commit #{Time.now.strftime 'on %-d %b %Y at %H:%M:%S'}'"
+      system 'git subtree push --prefix build origin gh-pages'
+      system 'git checkout master'
+      system '✅ Website successfully published!'
     else
       puts '⚠️ ERROR: You must set a remote before deploying'
     end
