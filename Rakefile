@@ -13,6 +13,9 @@ end
 namespace :middleman do
   desc 'Run `middleman build` with bundler'
   task :build do
+    building_bar = ProgressBar.create(title: '🏗  Building project', progress_mark: '.', format: '%t%B')
+    10.times { building_bar.increment; sleep 0.25 }
+    puts '🏗  Building project..........'
     system 'bundle exec middleman build'
   end
 
@@ -22,14 +25,10 @@ namespace :middleman do
     remotes_bar = ProgressBar.create(title: 'Looking for remotes', progress_mark: '.', format: '%t%B')
     10.times { remotes_bar.increment; sleep 0.25 }
     if system 'git remote -v &>/dev/null'
-      remotes_bar.increment
       remote = `git config --get remote.origin.url`
       gh_pages_url = "https://#{remote.gsub('git@github.com:', '').gsub('/', '.github.io/')}"
       `git branch -f gh-pages`
       unless ARGV[1] == 'no-build'
-        building_bar = ProgressBar.create(title: '🏗  Building project', progress_mark: '.', format: '%t%B')
-        10.times { building_bar.increment; sleep 0.25 }
-        puts '🏗  Building project..........'
         system 'rake middleman:build'
         `git add build`
         `git commit -m 'Automated Middleman deploy commit #{Time.now.strftime 'on %-d %b %Y at %H:%M:%S'}' &>/dev/null`
