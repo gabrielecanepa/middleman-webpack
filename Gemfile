@@ -5,6 +5,7 @@ gem 'middleman-autoprefixer',     '~> 2.9.0'
 gem 'middleman-dotenv',           '~> 2.0.0'
 gem 'middleman-favicon-maker',    '~> 4.1.0'
 gem 'middleman-livereload',       '~> 3.4.6'
+gem 'middleman-meta-tags',        '~> 0.4.0'
 gem 'middleman-minify-html',      '~> 3.4.1'
 gem 'middleman-pry',              '~> 1.0.2'
 

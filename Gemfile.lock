@@ -96,6 +96,8 @@ GEM
       em-websocket (~> 0.5.1)
       middleman-core (>= 3.3)
       rack-livereload (~> 0.3.15)
+    middleman-meta-tags (0.4.0)
+      middleman-core (>= 3.0.0)
     middleman-minify-html (3.4.1)
       htmlcompressor (~> 0.2.0)
       middleman-core (>= 3.2)
@@ -155,6 +157,7 @@ DEPENDENCIES
   middleman-dotenv (~> 2.0.0)
   middleman-favicon-maker (~> 4.1.0)
   middleman-livereload (~> 3.4.6)
+  middleman-meta-tags (~> 0.4.0)
   middleman-minify-html (~> 3.4.1)
   middleman-pry (~> 1.0.2)
   rake
