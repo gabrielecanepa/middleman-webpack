@@ -1,5 +1,9 @@
+AllCops:
+  Exclude:
+    - 'Rakefile'
+
 Metrics/LineLength:
-  Max: 125
+  Max: 120
 Metrics/MethodLength:
   Max: 40
 Metrics/BlockLength:
