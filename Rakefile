@@ -22,11 +22,12 @@ namespace :middleman do
   desc 'Deploy Middleman application on GitHub Pages'
   task :deploy do
     ARGV.each { |a| task a.to_sym { ; } }
-    remotes_bar = ProgressBar.create(title: 'Looking for remotes', progress_mark: '.', format: '%t%B')
+    remotes_bar = ProgressBar.create(title: 'Looking for GitHub remotes', progress_mark: '.', format: '%t%B')
     10.times { remotes_bar.increment; sleep 0.25 }
-    if system 'git remote -v &>/dev/null'
+    remotes = `git remote -v`
+    if remotes.include?('git@github.com')
       remote = `git config --get remote.origin.url`
-      gh_pages_url = "https://#{remote.gsub('git@github.com:', '').gsub('/', '.github.io/')}"
+      gh_pages_url = "https://#{remote.gsub('git@github.com:', '').gsub('/', '.github.io/').gsub('.git', '')}"
       `git branch -f gh-pages`
       unless ARGV[1] == 'no-build'
         system 'rake middleman:build'
@@ -37,7 +38,7 @@ namespace :middleman do
       system 'git subtree push --prefix build origin gh-pages'
       puts "🚀 Website successfully published at #{gh_pages_url}"
     else
-      puts '⚠️ ERROR: You must set a remote before deploying'
+      puts '⚠️  ERROR: You must set a GitHub remote before deploying'
     end
   end
 end
