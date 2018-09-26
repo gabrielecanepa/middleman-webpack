@@ -19,6 +19,8 @@ activate :external_pipeline,
          source:   'dist',
          latency:  1
 
+activate :meta_tags
+
 # Layouts
 # https://middlemanapp.com/basics/layouts/
 
