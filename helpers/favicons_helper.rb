@@ -1,4 +1,4 @@
-module FaviconHelpers
+module FaviconsHelper
   def favicon_tags
     @favicons = ''
     favicon_tags = [
