@@ -3,6 +3,5 @@
 .DS_Store
 .env
 .sass-cache
-.tmp
-dist
-node_modules
+dist/
+node_modules/
