@@ -49,12 +49,11 @@ task :test do
   # status = `git status --porcelain`
   status = `git diff --exit-code`
   puts status
-  if status.zero?
+  if status.to_i.zero?
     puts 'clean'
   else
     puts 'no clean'
   end
-  puts g.status
 end
 
 task default: %i[eslint rubocop]
