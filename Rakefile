@@ -32,27 +32,15 @@ namespace :middleman do
       unless ARGV[1] == 'no-build'
         system 'rake middleman:build'
         `mv build/views/* build && rm -rf build/views`
+        `git add build`
+        `git commit -m 'Automated Middleman deploy commit #{Time.now.strftime 'on %-d %b %Y at %H:%M:%S'}'`
+        `git push origin master`
       end
-      `sed -i '' '/build/d' .gitignore`
-      `git add build`
-      `git commit -m 'Automated Middleman deploy commit #{Time.now.strftime 'on %-d %b %Y at %H:%M:%S'}' &>/dev/null`
       system 'git subtree push --prefix build origin gh-pages'
-      `git reset --hard &>/dev/null`
       puts "🚀 Website successfully published at #{gh_pages_url}"
     else
       puts '⚠️  ERROR: You must set a GitHub origin before deploying'
     end
-  end
-end
-
-task :test do
-  # status = `git status --porcelain`
-  status = `git diff --exit-code`
-  puts status
-  if status.to_i.zero?
-    puts 'clean'
-  else
-    puts 'no clean'
   end
 end
 
