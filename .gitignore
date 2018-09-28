@@ -6,5 +6,3 @@
 build/
 dist/
 node_modules/
-
-Rakefile # to remove
