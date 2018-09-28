@@ -46,13 +46,15 @@ namespace :middleman do
 end
 
 task :test do
-  status = `git status --porcelain`
+  # status = `git status --porcelain`
+  status = `git diff --exit-code`
   puts status
-  if status == ''
+  if status.zero?
     puts 'clean'
   else
     puts 'no clean'
   end
+  puts g.status
 end
 
 task default: %i[eslint rubocop]
