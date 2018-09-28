@@ -11,7 +11,7 @@ gem 'middleman-pry',              '~> 1.0.2'
 
 group :development do
   gem 'rake',     require: true
-  gem 'rubocop',  require: false
+  gem 'rubocop'
 end
 
 # -- NEEDS FIX -- not yet compatible with Middleman 4.x
