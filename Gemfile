@@ -10,7 +10,7 @@ gem 'middleman-minify-html',      '~> 3.4.1'
 gem 'middleman-pry',              '~> 1.0.2'
 
 group :development do
-  gem 'rake',     require: false
+  gem 'rake',     require: true
   gem 'rubocop',  require: false
 end
 
