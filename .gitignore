@@ -3,6 +3,6 @@
 .DS_Store
 .env
 .sass-cache
+build/
 dist/
 node_modules/
-build/
