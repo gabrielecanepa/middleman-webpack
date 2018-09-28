@@ -47,6 +47,7 @@ end
 
 task :test do
   status = `git status --porcelain`
+  puts status
   if status.nil?
     puts 'clean'
   else
