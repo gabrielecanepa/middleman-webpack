@@ -1,8 +1,8 @@
 {
-  "name": "middleman-template",
+  "name": "middleman-webpack",
   "version": "1.0.0",
   "description": "🏗 Scalable Middleman 4 template with Sass, yarn, webpack, Babel, ESLint and modern best practices.",
-  "repository": "https://github.com/gabrielecanepa/middleman-template",
+  "repository": "https://github.com/gabrielecanepa/middleman-webpack",
   "author": "Gabriele Canepa <gabriele@canepa.io>",
   "license": "MIT",
   "devDependencies": {

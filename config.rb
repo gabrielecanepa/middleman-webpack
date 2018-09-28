@@ -1,8 +1,7 @@
 Dir['lib/*.rb'].each { |file| require file }
 
-set :css_dir,     'assets/stylesheets'
-set :images_dir,  'assets/images'
-set :js_dir,      'assets/javascripts'
+set :index_file,  'views/index.html'
+set :layouts_dir, 'views/layouts'
 
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
@@ -62,11 +61,11 @@ configure :development do
 end
 
 configure :build do
-  ignore 'assets/javascripts/*' # handled by webpack
+  ignore 'javascripts/*' # handled by webpack
   set :relative_links, true
   activate :asset_hash
   activate :favicon_maker do |f|
-    f.template_dir = 'source/assets/images'
+    f.template_dir = 'source/images'
     f.icons = generate_favicons('_favicon.svg')
   end
   activate :minify_css

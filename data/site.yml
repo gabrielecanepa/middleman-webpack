@@ -1,8 +1,8 @@
 author: "Gabriele Canepa"
 mail: "gabriele@canepa.io"
-name: "Middleman Template"
+name: "Middleman webpack Template"
 baseline: "🏗 Scalable Middleman 4 template with Sass, yarn, webpack, Babel, ESLint and modern best practices"
-url: "http://gabrielecanepa.github.io/middleman-template"
+url: "http://gabrielecanepa.github.io/middleman-webpack"
 geocoding:
   place: "Lisbon, Portugal"
   latitude: "38.7437396"

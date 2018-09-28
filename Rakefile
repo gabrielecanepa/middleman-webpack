@@ -2,7 +2,7 @@ require 'ruby-progressbar'
 
 desc 'Check style in your JavaScript files with ESLint'
 task :eslint do
-  system 'node_modules/.bin/eslint source/assets/javascripts/*.js'
+  system 'node_modules/.bin/eslint source/javascripts/*.js'
 end
 
 desc 'Check style in your Ruby files with RuboCop'
@@ -24,23 +24,32 @@ namespace :middleman do
     ARGV.each { |a| task a.to_sym { ; } }
     remotes_bar = ProgressBar.create(title: 'Looking for GitHub remotes', progress_mark: '.', format: '%t%B')
     10.times { remotes_bar.increment; sleep 0.25 }
-    remotes = `git remote -v`
-    if remotes.include?('git@github.com')
-      remote = `git config --get remote.origin.url`
+    remote = `git config --get remote.origin.url`
+    if remote.include?('git@github.com')
       gh_pages_url = "https://#{remote.gsub('git@github.com:', '').gsub('/', '.github.io/').gsub('.git', '')}"
-      `git branch -f gh-pages`
+      # `git branch -f gh-pages`
       unless ARGV[1] == 'no-build'
         system 'rake middleman:build'
-        `git add build`
-        `git commit -m 'Automated Middleman deploy commit #{Time.now.strftime 'on %-d %b %Y at %H:%M:%S'}' &>/dev/null`
-        `git push origin master &>/dev/null`
+        `mv build/views/* build && rm -rf build/views`
+        # `git push origin master &>/dev/null`
       end
+      `sed -i '' '/build/d' .gitignore`
+      `git checkout -b gh-pages` unless `git checkout gh-pages`
+      `git add build`
+      `git commit -m 'Automated Middleman deploy commit #{Time.now.strftime 'on %-d %b %Y at %H:%M:%S'}' &>/dev/null`
       system 'git subtree push --prefix build origin gh-pages'
+      `git checkout master`
+      `echo 'build/' >> .gitignore`
       puts "🚀 Website successfully published at #{gh_pages_url}"
     else
       puts '⚠️  ERROR: You must set a GitHub remote before deploying'
     end
   end
+end
+
+task :test do
+  status = `git status --porcelain`
+  puts status
 end
 
 task default: %i[eslint rubocop]
