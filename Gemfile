@@ -9,9 +9,11 @@ gem 'middleman-meta-tags',        '~> 0.4.0'
 gem 'middleman-minify-html',      '~> 3.4.1'
 gem 'middleman-pry',              '~> 1.0.2'
 
+gem 'oga',                        '~> 2.15'
+
 group :development do
   gem 'rake',     require: true
-  gem 'rubocop',  require: false
+  gem 'rubocop'
 end
 
 # -- NEEDS FIX -- not yet compatible with Middleman 4.x
