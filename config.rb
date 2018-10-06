@@ -64,12 +64,12 @@ configure :development do
 end
 
 configure :build do
-  ignore 'assets/javascripts/*' # handled by webpack
+  ignore File.join(config[:js_dir], '*') # handled by webpack
   set :relative_links, true
   activate :asset_hash
   activate :favicon_maker do |f|
-    f.template_dir = 'source/assets/images'
-    f.icons = generate_favicons('_favicon.svg')
+    f.template_dir = File.join(config[:source], config[:images_dir])
+    f.icons = Favicon.generate('_favicon.svg')
   end
   activate :minify_css
   activate :minify_html
