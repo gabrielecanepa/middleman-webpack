@@ -40,7 +40,9 @@ namespace :middleman do
       puts "〰️ Using #{remote}"
       if system '[ -n "$(git status --porcelain)" ]'
         status = `git status`
-        puts "⚠️  WARNING: Your status is not clean -#{' stash or add and' if status.include?('Untracked files') || status.include?('Changes not staged for commit')} commit the following files before deploying"
+        puts '⚠️  WARNING: Your status is not clean - '\
+             "#{'stash or add and ' if status.include?('Untracked files') || status.include?('Changes not staged')}"\
+             'commit the following files before deploying'
         system 'git status'
       else
         gh_pages_url = "https://#{remote.sub('git@github.com:', '').sub('.git', '').sub('/', '.github.io/')}"

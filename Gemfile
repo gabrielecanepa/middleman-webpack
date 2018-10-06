@@ -12,7 +12,7 @@ gem 'middleman-pry',              '~> 1.0.2'
 gem 'oga',                        '~> 2.15'
 
 group :development do
-  gem 'rake',     require: true
+  gem 'rake', require: true
   gem 'rubocop'
 end
 
