@@ -47,12 +47,9 @@ namespace :middleman do
       else
         gh_pages_url = "https://#{remote.sub('git@github.com:', '').sub('.git', '').sub('/', '.github.io/')}"
         `git branch -f gh-pages`
-        unless ARGV[1] == 'no-build'
-          system 'rake middleman:build'
-          `git add build`
+        system 'rake middleman:build' unless ARGV[1] == 'no-build'
+        `git add build &>/dev/null`
           `git commit -m 'Automated Middleman deploy commit #{Time.now.strftime 'on %-d %b %Y at %H:%M:%S'}' &>/dev/null`
-          `git push origin master &>/dev/null`
-        end
         system 'git subtree push --prefix build origin gh-pages'
         puts "🚀 Website successfully published at #{gh_pages_url}"
       end
