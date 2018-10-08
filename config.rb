@@ -69,7 +69,7 @@ configure :build do
   activate :asset_hash
   activate :favicon_maker do |f|
     f.template_dir = File.join(config[:source], config[:images_dir])
-    f.icons = Favicon.generate('logo.svg')
+    f.icons = Favicon.generate('_favicon.svg')
   end
   activate :minify_css
   activate :minify_html
