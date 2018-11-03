@@ -1,17 +1,31 @@
+require 'lib/favicon'
+
 module FaviconsHelper
-  def favicon_tags
-    @favicons = ''
-    favicon_tags = [
-      '<link rel="apple-touch-icon" sizes="180x180" href="assets/images/apple-touch-icon-180x180-precomposed.png">',
-      '<link rel="apple-touch-icon" sizes="152x152" href="assets/images/apple-touch-icon-152x152-precomposed.png">',
-      '<link rel="apple-touch-icon" sizes="144x144" href="assets/images/apple-touch-icon-144x144-precomposed.png">',
-      '<link rel="apple-touch-icon" sizes="114x114" href="assets/images/apple-touch-icon-114x114-precomposed.png">',
-      '<link rel="apple-touch-icon" sizes="72x72" href="assets/images/apple-touch-icon-72x72-precomposed.png">',
-      '<link rel="apple-touch-icon" href="assets/images/apple-touch-icon-precomposed.png">',
-      '<link rel="shortcut icon" href="assets/images/favicon.png">',
-      '<link rel="icon" type="image/ico" href="assets/images/favicon.ico">'
-    ]
-    favicon_tags.map { |favicon_tag| @favicons << favicon_tag + "\n" }
-    @favicons
+  def auto_display_favicon_tags
+    result = []
+
+    if data.site.base_color
+      result << tag(:meta, name: 'theme-color', content: data.site.base_color)
+      result << tag(:meta, name: 'msapplication-TileColor', content: data.site.base_color)
+    end
+
+    if @favicons = Favicon.generate(config[:images_dir], data.site.favicon)[File.join(config[:images_dir], data.site.favicon)]
+      @favicons.each do |favicon|
+        favicon_link_tags = {}
+        favicon.each_key do |key|
+          if key == :icon
+            favicon_link_tags[:href] = favicon[key]
+          elsif key == :size
+            key == :sizes
+          else
+            favicon_link_tags[key] = favicon[key]
+          end
+        end
+        result << tag(:link, favicon_link_tags)
+      end
+    end
+
+    result = result.join("\n")
+    result.html_safe
   end
 end

@@ -2,7 +2,7 @@ require 'lib/svg'
 
 module ImagesHelper
   def svg_tag(filename, options = {})
-    root      = Middleman::Application.root
+    root = Middleman::Application.root
     file_path = File.join(root, 'source', config[:images_dir], filename)
     return '(SVG image not found)' unless File.exist?(file_path)
 

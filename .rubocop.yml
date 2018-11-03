@@ -1,17 +1,25 @@
-AllCops:
-  Exclude:
-    - 'Rakefile'
+Rails:
+  Enabled: true
 
-Metrics/BlockLength:
-  Max: 80
 Metrics/LineLength:
   Max: 120
 Metrics/MethodLength:
   Max: 40
 
+Naming/AccessorMethodName:
+  Enabled: false
+Naming/BinaryOperatorParameterName:
+  Enabled: false
+
 Style/Documentation:
   Enabled: false
 Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/HashSyntax:
+  EnforcedStyle: ruby19_no_mixed_keys
+Style/PreferredHashMethods:
+  Enabled: false
+Style/SingleLineBlockParams:
   Enabled: false
 Style/SymbolArray:
   Enabled: true
