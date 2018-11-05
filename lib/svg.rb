@@ -1,11 +1,8 @@
 require 'oga'
 
 class SVG
-  private
 
   attr_reader :file_path, :options
-
-  public
 
   def self.inline(file_path, options = {})
     new(file_path, options).inline
