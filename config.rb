@@ -1,9 +1,9 @@
 Dir['lib/*.rb'].each { |file| require file }
 
-set :css_dir,     'assets/stylesheets'
-set :fonts_dir,   'assets/fonts'
-set :images_dir,  'assets/images'
-set :js_dir,      'assets/javascripts'
+set :css_dir,    'assets/stylesheets'
+set :fonts_dir,  'assets/fonts'
+set :images_dir, 'assets/images'
+set :js_dir,     'assets/javascripts'
 
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
@@ -66,6 +66,7 @@ configure :build do
   set      :relative_links, true
   activate :asset_hash
   activate :favicon_maker do |favicon|
+    # Place your favicon in the images dir and specify it in data/site.yml
     favicon.icons = Favicon.generate(@app.config.images_dir, @app.data.site.favicon)
   end
   activate :minify_css
@@ -75,7 +76,7 @@ configure :build do
 end
 
 activate :deploy do |deploy|
-  deploy.deploy_method   = :git
-  deploy.branch          = 'gh-pages'
-  deploy.build_before    = true
+  deploy.deploy_method = :git
+  deploy.branch        = 'gh-pages'
+  deploy.build_before  = true
 end
