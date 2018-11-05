@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/gabrielecanepa/middleman-meta-tags
+  revision: c3e41984fbe16449000035c815777e0d6f7707c1
+  branch: master
+  specs:
+    middleman-meta-tags (0.4.0)
+      middleman-core (>= 3.0.0)
+
+GIT
   remote: https://github.com/middleman-contrib/middleman-deploy
   revision: 4d04b550b4c6888265d83ee9689f41e29dbae535
   branch: master
@@ -23,10 +31,6 @@ GEM
     autoprefixer-rails (8.6.5)
       execjs
     backports (3.11.4)
-    better_errors (2.5.0)
-      coderay (>= 1.0.0)
-      erubi (>= 1.0.0)
-      rack (>= 0.9.0)
     coderay (1.1.2)
     coffee-script (2.4.1)
       coffee-script-source
@@ -41,7 +45,6 @@ GEM
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
-    erubi (1.7.1)
     erubis (2.7.0)
     eventmachine (1.2.7)
     execjs (2.7.0)
@@ -176,13 +179,13 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  better_errors
   middleman (~> 4.2.1)
   middleman-autoprefixer (~> 2.9.0)
   middleman-deploy!
   middleman-dotenv (~> 2.0.0)
   middleman-favicon-maker (~> 4.1.0)
   middleman-livereload (~> 3.4.6)
+  middleman-meta-tags!
   middleman-minify-html (~> 3.4.1)
   middleman-pry (~> 1.0.2)
   oga (~> 2.15)
