@@ -1,3 +1,3 @@
 # Middleman webpack
 
-🏗 Scalable Middleman 4 template
+🏗 Scalable ready-to-use Middleman 4 template

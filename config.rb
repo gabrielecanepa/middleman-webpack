@@ -1,4 +1,8 @@
+# Import custom classes
 Dir['lib/*.rb'].each { |file| require file }
+
+# Include node_modules in Sass load paths
+::Sass.load_paths << File.join(root, 'node_modules')
 
 set :css_dir,    'assets/stylesheets'
 set :fonts_dir,  'assets/fonts'
@@ -15,12 +19,13 @@ end
 activate :dotenv
 
 activate :external_pipeline,
-         name:     :webpack,
-         command:  build? ? 'yarn run build' : 'yarn run start',
-         source:   'dist',
-         latency:  1
+         name:    :webpack,
+         command: build? ? 'yarn run build' : 'yarn run start',
+         source:  'dist',
+         latency: 1
 
 activate :meta_tags
+activate :protect_emails
 
 # Layouts
 # https://middlemanapp.com/basics/layouts/
@@ -67,12 +72,14 @@ configure :build do
   ignore   File.join(config[:js_dir], '*') # handled by webpack
   set      :relative_links, true
   activate :asset_hash
-  # Place your favicon in the images dir and specify it in data/site.yml
-  activate :favicon_maker, :icons => Favicon.generate(@app.config.images_dir, @app.data.site.favicon)
+  # Place the icon (png or svg) in your images dir and specify it in data/site.yml
+  activate :favicon_maker, icons: Favicon.generate(@app.config.images_dir, @app.data.site.favicon)
   activate :minify_css
   activate :minify_html
   activate :minify_javascript
   activate :relative_assets
+  activate :robots, rules:   [{ user_agent: '*', allow: %w(/) }],
+                    sitemap: "#{@app.data.site.host}/sitemap.xml"
 end
 
 activate :deploy do |deploy|

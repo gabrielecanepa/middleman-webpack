@@ -1,9 +1,9 @@
-desc 'Check style in your JavaScript files with ESLint'
+desc 'Check your JavaScript style with ESLint'
 task :eslint do
   system 'node_modules/.bin/eslint source/assets/javascripts/*.js'
 end
 
-desc 'Check style in your Ruby files with RuboCop'
+desc 'Check your Ruby style with RuboCop'
 task :rubocop do
   system 'rubocop'
 end
