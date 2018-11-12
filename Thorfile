@@ -7,12 +7,12 @@ module Middleman
     source_root File.expand_path(File.dirname(__FILE__))
 
     def copy_default_files
-      directory 'template', '.', exclude_pattern: /\.DS_Store$/
+      directory 'template', '.', exclude_pattern: /\.DS_Store\.package.json$/
     end
 
     def bundle_install
       run 'bundle install'
-      run 'bundle clean --force &>/dev/null'
+      run 'bundle clean'
     end
 
     def yarn_install
