@@ -13,7 +13,7 @@ module Middleman
     end
 
     def bundle_install
-      run 'cd $_'
+      run 'cd $_ &>/dev/null'
       run 'bundle install'
       run 'bundle clean --force'
     end
@@ -21,7 +21,6 @@ module Middleman
     def yarn_install
       run 'yarn install'
     end
-
 
     def print_success_message
       puts '📦  Repository successfully created with middleman-webpack!'
