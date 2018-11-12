@@ -9,9 +9,11 @@ module Middleman
 
     def copy_default_files
       directory 'template', '.', exclude_pattern: /\.DS_Store$/
+      run 'touch .env'
     end
 
     def bundle_install
+      run 'cd $_'
       run 'bundle install'
       run 'bundle clean --force'
     end
@@ -20,15 +22,15 @@ module Middleman
       run 'yarn install'
     end
 
+
     def print_success_message
-      puts '🎉 Repository successfully created with middleman-webpack!'
-      server_bar = ProgressBar.create(title: '🏗 Running server', progress_mark: '.', format: '%t%B')
-      10.times do
+      puts '📦  Repository successfully created with middleman-webpack!'
+      server_bar = ProgressBar.create(title: '🛠   Running server', progress_mark: '.', format: '%t%B')
+      3.times do
         server_bar.increment
         sleep 0.25
       end
-      puts '🏗 Running server'
-
+      puts '🛠   Running server...'
     end
 
     def run_server

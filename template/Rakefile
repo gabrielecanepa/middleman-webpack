@@ -8,7 +8,7 @@ task :rubocop do
   system 'rubocop'
 end
 
-desc 'Test your tasks'
+desc 'Test your task'
 task :test do
   # Test your tasks here!
 end

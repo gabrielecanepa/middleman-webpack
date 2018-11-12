@@ -3,6 +3,7 @@
 .DS_Store
 .env
 .lock
+.log
 .sass-cache
 build/
 dist/
