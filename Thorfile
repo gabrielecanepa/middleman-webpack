@@ -16,7 +16,7 @@ module Middleman
     end
 
     def yarn_install
-      run 'yarn install'
+      run 'yarn init'
     end
 
     def generate_binstub
