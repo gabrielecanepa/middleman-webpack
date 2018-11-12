@@ -19,8 +19,8 @@ module Middleman
       run 'yarn install'
     end
 
-    def run_middleman
-      run 'middleman server'
+    def print_success_message
+      puts 'Repository successfully created!'
     end
   end
 end
