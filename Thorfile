@@ -1,4 +1,5 @@
 require 'thor/group'
+require 'ruby-progressbar'
 
 module Middleman
   class Generator < ::Thor::Group
@@ -11,8 +12,8 @@ module Middleman
     end
 
     def bundle_install
-      run 'bundle clean --force'
       run 'bundle install'
+      run 'bundle clean --force'
     end
 
     def yarn_install
@@ -20,7 +21,14 @@ module Middleman
     end
 
     def print_success_message
-      puts 'Repository successfully created with middleman-webpack! 🏗🎉'
+      puts '🎉 Repository successfully created with middleman-webpack!'
+      server_bar = ProgressBar.create(title: '🏗 Running server', progress_mark: '.', format: '%t%B')
+      10.times do
+        server_bar.increment
+        sleep 0.25
+      end
+      puts '🏗 Running server'
+
     end
 
     def run_server
