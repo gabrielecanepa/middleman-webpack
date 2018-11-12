@@ -5,8 +5,6 @@
 Dir['./*/*.rb'].each { |file| load file }
 include FaviconsHelper
 
-# binding.pry
-
 # Load Sass from node_modules
 ::Sass.load_paths << File.join(root, 'node_modules')
 
