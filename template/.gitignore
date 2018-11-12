@@ -2,6 +2,7 @@
 .env
 .sass-cache
 *.bundle
+*.cache
 *.log
 *.lock
 build/
