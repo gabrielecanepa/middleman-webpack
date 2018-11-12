@@ -8,4 +8,9 @@ task :rubocop do
   system 'rubocop'
 end
 
+desc 'Test your tasks'
+task :test do
+  # Test your tasks here!
+end
+
 task default: %i[eslint rubocop]

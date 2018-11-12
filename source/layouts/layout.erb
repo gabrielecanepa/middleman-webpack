@@ -2,13 +2,13 @@
 <html>
   <head>
     <%= auto_display_meta_tags %>
-    <%= auto_display_favicon_tags if build? %>
-    <%= stylesheet_link_tag 'all' %>
+    <%= auto_display_favicon_tags %>
+    <%= stylesheet_link_tag "all" %>
   </head>
 
   <body>
     <%= yield %>
 
-    <%= javascript_include_tag 'bundle' %>
+    <%= javascript_include_tag "bundle" %>
   </body>
 </html>
