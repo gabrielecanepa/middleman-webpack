@@ -1,10 +1,9 @@
-.bundle
-.cache
 .DS_Store
 .env
-.lock
-.log
 .sass-cache
+*.bundle
+*.log
+*.lock
 build/
 dist/
 node_modules/
