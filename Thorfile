@@ -22,7 +22,6 @@ module Middleman
     end
 
     def print_success_message
-      run 'cd $_ &>/dev/null'
       puts '📦  Repository successfully created with middleman-webpack!'
       server_bar = ProgressBar.create(title: '🛠   Running server', progress_mark: '.', format: '%t%B')
       3.times do
