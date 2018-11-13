@@ -2,11 +2,14 @@ body {
   background-color: $yellow;
   color: $black;
   font-family: $font-family-base;
+  font-size: 1em;
   padding: 18vh 1rem;
   text-align: center;
 }
 a {
   color: rgba(#000, 0.7);
+  text-decoration: none;
+  font-weight: 500;
   &:focus,
   &:hover {
     color: rgba(#000, 0.6);
