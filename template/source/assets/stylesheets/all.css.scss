@@ -1,26 +1,16 @@
 @charset "utf-8";
 
-// Settings
+// Suggested structure:
+// 1. Settings
+//    ├── settings/
+// 2. Vendors
+//    ├── vendors-settings/
+// 3. Styling
+//    ├── 1. base/
+//    ├── 2. components/
+//    ├── 3. layouts/
+//    ├── 4. pages/
+
 @import "settings/colors";
 @import "settings/fonts";
-@import "settings/variables";
-
-// Vendors
-// @import "vendor-settings/bootstrap";
-// @import "bootstrap/scss/bootstrap";
-
-// Styling
-// 1. site
-@import "site";
-
-// 2. components/
-// @import "components/card";
-// @import "components/lists";
-
-// 3. layout/
-// @import "layouts/navbar";
-// @import "layouts/footer";
-
-// 4. pages/
-// @import "pages/home";
-// @import "pages/404";
+@import "base/site";
