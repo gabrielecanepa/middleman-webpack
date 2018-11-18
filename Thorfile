@@ -1,11 +1,11 @@
-require 'thor/group'
 require 'ruby-progressbar'
+require 'thor/group'
 
 module Middleman
   class Generator < ::Thor::Group
     include ::Thor::Actions
 
-    source_root File.expand_path(File.dirname(__FILE__))
+    source_root __dir__
 
     def copy_template_files
       directory 'template', '.', exclude_pattern: /\.DS_Store$/
@@ -23,9 +23,9 @@ module Middleman
     end
 
     def print_success_message
-      puts '📦  Repository successfully created with middleman-webpack!'
+      puts '📦  Repository successfully created with middleman-webpack! '\
+           'View your site at "http://localhost:4567"'
       show_progress_bar('🛠   Running server')
-      puts '🛠   Running server...'
     end
 
     def run_server
@@ -44,6 +44,7 @@ module Middleman
         progress_bar.increment
         sleep 0.25
       end
+      puts title
     end
   end
 end
