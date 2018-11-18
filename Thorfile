@@ -7,7 +7,7 @@ module Middleman
 
     source_root File.expand_path(File.dirname(__FILE__))
 
-    def copy_default_files
+    def copy_template_files
       directory 'template', '.', exclude_pattern: /\.DS_Store$/
       run 'touch .env'
     end
@@ -24,16 +24,26 @@ module Middleman
 
     def print_success_message
       puts '📦  Repository successfully created with middleman-webpack!'
-      server_bar = ProgressBar.create(title: '🛠   Running server', progress_mark: '.', format: '%t%B')
-      3.times do
-        server_bar.increment
-        sleep 0.25
-      end
+      show_progress_bar('🛠   Running server')
       puts '🛠   Running server...'
     end
 
     def run_server
       run 'middleman server'
+    end
+
+    private
+
+    def show_progress_bar(title)
+      progress_bar = ProgressBar.create(
+        title: title,
+        progress_mark: '.',
+        format: '%t%B'
+      )
+      3.times do
+        progress_bar.increment
+        sleep 0.25
+      end
     end
   end
 end
