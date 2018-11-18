@@ -23,8 +23,7 @@ module Middleman
     end
 
     def print_success_message
-      puts '📦  Repository successfully created with middleman-webpack! '\
-           'View your site at "http://localhost:4567"'
+      puts '📦  Repository successfully created with middleman-webpack!'
       show_progress_bar('🛠   Running server')
     end
 
