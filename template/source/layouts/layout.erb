@@ -2,7 +2,7 @@
 <html>
   <head>
     <%= auto_display_meta_tags %>
-    <%= auto_display_favicon_tags %>
+    <%= auto_display_favicon_tags if build? %>
     <%= stylesheet_link_tag "all" %>
   </head>
 
