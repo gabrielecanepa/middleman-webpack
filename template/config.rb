@@ -13,11 +13,36 @@ set :fonts_dir,  'assets/fonts'
 set :images_dir, 'assets/images'
 set :js_dir,     'assets/javascripts'
 
+set :favicons, [
+  {
+    rel: 'apple-touch-icon',
+    size: '180x180',
+    icon: 'apple-touch-icon.png'
+  },
+  {
+    rel: 'icon',
+    type: 'image/png',
+    size: '32x32',
+    icon: 'favicon32x32.png'
+  },
+  {
+    rel: 'icon',
+    type: 'image/png',
+    size: '16x16',
+    icon: 'favicon16x16.png'
+  },
+  {
+    rel: 'shortcut icon',
+    size: '64x64,32x32,24x24,16x16',
+    icon: 'favicon.ico'
+  }
+]
+
 # Activate and configure extensions
 # https://middlemanapp.com/advanced/configuration/#configuring-extensions
 
-activate :autoprefixer do |prefix|
-  prefix.browsers = 'last 2 versions'
+activate :autoprefixer do |config|
+  config.browsers = 'last 2 versions'
 end
 
 activate :external_pipeline,
@@ -74,15 +99,17 @@ configure :build do
   set      :relative_links, true
   activate :asset_hash
   # Place your base icon in the images dir and specify it in your data/site.yml
-  activate :favicon_maker, icons: generate_favicon_hash
+  activate :favicon_maker, icons: generate_favicon_hash('favicon')
   activate :gzip
-  activate :imageoptim, manifest: false, pngout: false, svgo: false
+  activate :imageoptim, manifest: false,
+                        pngout: false,
+                        svgo: false
   activate :minify_css
   activate :minify_html
   activate :minify_javascript
   activate :relative_assets
-  activate :robots,  rules: [{ user_agent: '*', allow: %w[/] }],
-                     sitemap: File.join(@app.data.site.host, 'sitemap.xml')
+  activate :robots, rules: [{ user_agent: '*', allow: %w[/] }],
+                    sitemap: File.join(@app.data.site.host, 'sitemap.xml')
 end
 
 activate :deploy do |deploy|
