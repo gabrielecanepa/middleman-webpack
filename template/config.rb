@@ -99,7 +99,7 @@ configure :build do
   set      :relative_links, true
   activate :asset_hash
   # Place your base icon in the images dir and specify it in your data/site.yml
-  activate :favicon_maker, icons: generate_favicon_hash('favicon')
+  activate :favicon_maker, icons: generate_favicon_hash
   activate :gzip
   activate :imageoptim, manifest: false,
                         pngout: false,
