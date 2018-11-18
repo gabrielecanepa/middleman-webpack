@@ -1,6 +1,6 @@
 {
   "name": "middleman-webpack",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "🏗 Scalable ready-to-use Middleman 4 template",
   "repository": "https://github.com/gabrielecanepa/middleman-webpack",
   "author": "Gabriele Canepa <gabriele@canepa.io>",
