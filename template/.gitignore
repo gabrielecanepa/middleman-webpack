@@ -5,6 +5,7 @@
 *.cache
 *.log
 *.lock
+bin/
 build/
 dist/
 node_modules/
