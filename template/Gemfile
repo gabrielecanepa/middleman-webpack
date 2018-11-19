@@ -17,6 +17,7 @@ gem 'middleman-pry'
 gem 'middleman-robots'
 
 group :development do
+  gem 'pry-byebug'
   gem 'rake'
   gem 'rubocop'
 end
