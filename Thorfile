@@ -14,7 +14,6 @@ module Middleman
 
     def bundle_install
       run 'bundle install'
-      run 'bundle clean'
     end
 
     def yarn_install
