@@ -16,7 +16,8 @@ module Middleman
       run 'bundle install'
     end
 
-    def yarn_upgrade
+    def yarn_install
+      run 'yarn install'
       run 'yarn upgrade'
     end
 
