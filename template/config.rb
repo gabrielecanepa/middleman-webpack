@@ -13,7 +13,7 @@ set :fonts_dir,  'assets/fonts'
 set :images_dir, 'assets/images'
 set :js_dir,     'assets/javascripts'
 
-# Set your favicons
+# Set favicons
 set :favicons, [
   {
     rel: 'apple-touch-icon',
