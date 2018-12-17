@@ -28,7 +28,7 @@ module Middleman
       puts Rainbow('Initializing git...').bright.orange
       system 'git init'
       system 'git add .'
-      system 'git commit -m "Initialize new repository with middleman-webpack"'
+      system 'git commit -m \'Initialize new repository with middleman-webpack\''
     end
 
     def print_success_message
