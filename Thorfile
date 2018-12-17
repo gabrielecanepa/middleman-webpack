@@ -21,6 +21,7 @@ module Middleman
     def yarn_install
       puts Rainbow('Installing packages...').orange.bright
       run 'yarn install'
+      run 'yarn upgrade'
     end
 
     def print_success_message
