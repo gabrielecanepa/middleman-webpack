@@ -19,18 +19,18 @@ module Middleman
     end
 
     def yarn_install
-      puts Rainbow('Installing npm packages...').orange.bright
+      puts Rainbow('Installing packages...').orange.bright
       run 'yarn install'
       run 'yarn upgrade'
     end
 
     def print_success_message
       puts Rainbow('📦  Repository successfully created with middleman-webpack!').orange.bright
-      puts Rainbow("Run your server with #{Rainbow('middleman server').green}").bright
     end
 
-    default_task %I[copy_template_files bundle_install yarn_install print_success_message]
+    def exit_script
+      exec zsh || exec bash
+      exit
+    end
   end
-
-  Generator.start
 end
