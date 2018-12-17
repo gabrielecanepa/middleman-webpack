@@ -29,8 +29,8 @@ module Middleman
     end
 
     def exit_script
-      exec zsh || exec bash
-      exit
+      `exec zsh || exec bash`
+      `exit`
     end
   end
 end
