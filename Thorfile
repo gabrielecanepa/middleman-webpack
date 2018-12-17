@@ -8,23 +8,24 @@ module Middleman
     source_root __dir__
 
     def copy_template_files
-      puts Rainbow('Copying template files...').orange.bright
+      puts Rainbow('Copying template files...').bright.orange
       directory 'template', '.', exclude_pattern: /\.DS_Store$/
       run 'touch .env'
     end
 
     def bundle_install
-      puts Rainbow('Installing gems...').orange.bright
+      puts Rainbow('Installing gems...').bright.orange
       run 'bundle install'
     end
 
     def yarn_install
-      puts Rainbow('Installing packages...').orange.bright
+      puts Rainbow('Installing packages...').bright.orange
       run 'yarn install'
     end
 
     def print_success_message
-      puts Rainbow('📦  Repository successfully created with middleman-webpack!').orange.bright
+      puts Rainbow('📦  Repository successfully created with middleman-webpack!').bright.orange
+      puts "Launch the app with #{Rainbow('middleman server').bright.green}"
     end
 
     def exit_script
