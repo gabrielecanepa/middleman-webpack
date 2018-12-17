@@ -1,5 +1,5 @@
-require 'ruby-progressbar'
 require 'thor/group'
+require 'rainbow'
 
 module Middleman
   class Generator < ::Thor::Group
@@ -8,41 +8,29 @@ module Middleman
     source_root __dir__
 
     def copy_template_files
+      puts Rainbow('Copying template files...').orange.bright
       directory 'template', '.', exclude_pattern: /\.DS_Store$/
       run 'touch .env'
     end
 
     def bundle_install
+      puts Rainbow('Installing gems...').orange.bright
       run 'bundle install'
     end
 
     def yarn_install
+      puts Rainbow('Installing npm packages...').orange.bright
       run 'yarn install'
       run 'yarn upgrade'
     end
 
     def print_success_message
-      puts '📦  Repository successfully created with middleman-webpack!'
-      print_progress_bar('🛠   Running server')
+      puts Rainbow('📦  Repository successfully created with middleman-webpack!').orange.bright
+      puts Rainbow("Run your server with #{Rainbow('middleman server').green}").bright
     end
 
-    def run_server
-      run 'middleman server'
-    end
-
-    private
-
-    def print_progress_bar(message)
-      progress_bar = ProgressBar.create(
-        title: message,
-        progress_mark: '.',
-        format: '%t%B'
-      )
-      3.times do
-        progress_bar.increment
-        sleep 0.25
-      end
-      puts message
-    end
+    default_task %I[copy_template_files bundle_install yarn_install print_success_message]
   end
+
+  Generator.start
 end
