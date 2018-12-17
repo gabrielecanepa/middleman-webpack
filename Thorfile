@@ -10,18 +10,25 @@ module Middleman
     def copy_template_files
       puts Rainbow('Copying template files...').bright.orange
       directory 'template', '.', exclude_pattern: /\.DS_Store$/
-      run 'touch .env'
+      `touch .env`
     end
 
     def install_gems
       puts Rainbow('Installing gems...').bright.orange
-      run 'gem cleanup'
-      run 'bundle install'
+      `gem cleanup`
+      system 'bundle install'
     end
 
     def install_packages
       puts Rainbow('Installing packages...').bright.orange
-      run 'yarn install'
+      system 'yarn install'
+    end
+
+    def initialize_git
+      puts Rainbow('Initializing git...').bright.orange
+      system 'git init'
+      system 'git add .'
+      system 'git commit -m "Initialize new repository with middleman-webpack"'
     end
 
     def print_success_message
