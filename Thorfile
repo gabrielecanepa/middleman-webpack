@@ -25,7 +25,6 @@ module Middleman
 
     def print_success_message
       puts Rainbow('📦  Repository successfully created with middleman-webpack!').bright.orange
-      puts "Launch the app with #{Rainbow('middleman server').bright.green}"
     end
 
     def exit_script
