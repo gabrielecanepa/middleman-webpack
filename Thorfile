@@ -13,12 +13,13 @@ module Middleman
       run 'touch .env'
     end
 
-    def bundle_install
+    def install_gems
       puts Rainbow('Installing gems...').bright.orange
+      run 'gem cleanup'
       run 'bundle install'
     end
 
-    def yarn_install
+    def install_packages
       puts Rainbow('Installing packages...').bright.orange
       run 'yarn install'
     end
