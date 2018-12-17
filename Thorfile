@@ -18,16 +18,36 @@ module Middleman
       system 'bundle install'
     end
 
+    packages = [
+      "@babel/core",
+      "@babel/preset-env",
+      "babel-loader",
+      "css-loader",
+      "eslint",
+      "eslint-config-airbnb-base",
+      "eslint-plugin-import",
+      "node-sass",
+      "postcss-loader",
+      "sass-loader",
+      "style-loader",
+      "stylelint",
+      "stylelint-config-recommended-scss",
+      "stylelint-scss",
+      "webpack",
+      "webpack-cli"
+    ]
+
     def install_packages
       puts Rainbow('Installing packages...').bright.orange
-      system 'yarn install'
+      `yarn init -y`
+      system "yarn add #{packages}"
     end
 
     def initialize_git
       puts Rainbow('Initializing git...').bright.orange
       system 'git init'
       system 'git add .'
-      system 'git commit -m \'Initialize new repository with middleman-webpack\''
+      system 'git commit -m "Initialize new repository with middleman-webpack"'
     end
 
     def print_success_message
