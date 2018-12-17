@@ -15,7 +15,6 @@ module Middleman
 
     def install_gems
       puts Rainbow('Installing gems...').bright.orange
-      `gem cleanup`
       system 'bundle install'
     end
 
