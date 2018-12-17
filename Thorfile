@@ -24,6 +24,10 @@ module Middleman
       system 'yarn install'
     end
 
+    def exit_subshell
+      `exec zsh || exec bash`
+    end
+
     def initialize_git
       puts Rainbow('Initializing git...').bright.orange
       system 'git init'
@@ -36,7 +40,6 @@ module Middleman
     end
 
     def exit_script
-      `exec zsh || exec bash`
       `exit`
     end
   end
