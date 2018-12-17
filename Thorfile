@@ -36,7 +36,7 @@ module Middleman
 
     def exit_script
       `exec zsh || exec bash`
-      `exit`
+      exit
     end
   end
 end
