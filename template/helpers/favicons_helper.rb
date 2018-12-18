@@ -38,13 +38,13 @@ module FaviconsHelper
     tags      = []
 
     generate_favicon_hash[icon_path].each do |favicon|
-      tags << tag(:link, set_tag_attributes(favicon))
+      tags << tag(:link, favicon_tag_attributes(favicon))
     end
 
     tags
   end
 
-  def set_tag_attributes(favicon)
+  def favicon_tag_attributes(favicon)
     attributes = {}
 
     favicon.each_key do |key|
