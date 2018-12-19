@@ -102,9 +102,6 @@ configure :build do
   # Place your base icon in the images dir and specify it in your data/site.yml
   activate :favicon_maker, icons: generate_favicon_hash
   activate :gzip
-  activate :imageoptim, manifest: false,
-                        pngout: false,
-                        svgo: false
   activate :minify_css
   activate :minify_html
   activate :minify_javascript
