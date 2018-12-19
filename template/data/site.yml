@@ -7,7 +7,6 @@ favicon:      "_favicon.svg"
 base_color:   "#FBC547"
 license:      "https://gabriele.canepa.io/mit-license"
 repository:   "https://github.com/gabrielecanepa/middleman-webpack"
-version:      "0.0.3"
 geocoding:
   place:      "Lisbon, Portugal"
   latitude:   "38.7437396"
@@ -17,4 +16,5 @@ author:
   name:       "Gabriele Canepa"
   email:      "gabriele@canepa.io"
   website:    "https://gabriele.canepa.io"
+  github:     "https://github.com/gabrielecanepa"
   phone:      "+1-202-555-0130"
