@@ -99,7 +99,6 @@ configure :build do
   ignore   File.join(config[:js_dir], '*') # handled by webpack
   set      :relative_links, true
   activate :asset_hash
-  # Place your base icon in the images dir and specify it in your data/site.yml
   activate :favicon_maker, icons: generate_favicon_hash
   activate :gzip
   activate :minify_css

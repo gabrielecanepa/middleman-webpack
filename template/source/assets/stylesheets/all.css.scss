@@ -1,15 +1,14 @@
-@charset "utf-8";
-
 // Suggested structure:
 // 1. Settings
 //    ├── settings/
 // 2. Vendors
+//    ├── vendors-stylesheets/
 //    ├── vendors-settings/
-// 3. Styling
+// 3. Style
 //    ├── 1. base/
 //    ├── 2. components/
 //    ├── 3. layouts/
-//    ├── 4. pages/
+//    └── 4. pages/
 
 @import "settings/colors";
 @import "settings/fonts";
