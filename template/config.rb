@@ -97,6 +97,7 @@ end
 
 configure :build do
   ignore   File.join(config[:js_dir], '*') # handled by webpack
+  set      :asset_host, @app.data.site.host
   set      :relative_links, true
   activate :asset_hash
   activate :favicon_maker, icons: generate_favicon_hash
