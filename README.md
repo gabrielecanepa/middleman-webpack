@@ -10,6 +10,23 @@ It's mainly based on [**Yarn**](https://yarnpkg.com), a reliable and easy to use
 
 All this combined with the simplicity of _Ruby and its gems_, some reinvented _powerful snippets_, and the _best available linters and debuggers_.
 
+## Table of contents
+
+-   [What's included?](#whats-included)
+-   [Dependencies](#dependencies)
+-   [Installation](#installation)
+-   [Usage](#usage)
+    -   [Getting started](#getting-started)
+    -   [Styling](#styling)
+    -   [Using Yarn and webpack](#using-yarn-and-webpack)
+    -   [Images](#images)
+    -   [Building and deploying](#building-and-deploying)
+-   [Extra](#extra)
+    -   [Testing and linters](#testing-and-linters)
+    -   [404 page](#404-page)
+-   [Contributing](#contributing)
+-   [License](#license)
+
 ## What's included?
 
 #### Core
