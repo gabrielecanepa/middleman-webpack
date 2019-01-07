@@ -24,14 +24,14 @@ module FaviconsHelper
   private
 
   def auto_generate_favicon_tags
-    icon_path = File.join(config[:images_dir], @app.data.site.favicon)
-    tags      = []
+    icon_path    = File.join(config[:images_dir], @app.data.site.favicon)
+    favicon_tags = []
 
     generate_favicons_hash[icon_path].each do |favicon|
-      tags << tag(:link, favicon_tag_attributes(favicon))
+      favicon_tags << tag(:link, favicon_tag_attributes(favicon))
     end
 
-    tags
+    favicon_tags
   end
 
   def favicon_tag_attributes(favicon)
