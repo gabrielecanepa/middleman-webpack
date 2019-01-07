@@ -166,10 +166,10 @@ set :favicons, [
 generate the following tags and relative icons:
 
 ```html
-<link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon16x16.png">
-<link rel="shortcut icon" sizes="64x64,32x32,24x24,16x16" href="assets/images/favicon/favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon16x16.png">
+<link rel="shortcut icon" sizes="64x64,32x32,24x24,16x16" href="favicon.ico">
 ```
 
 ### Styling
@@ -292,7 +292,7 @@ svg_tag(file_name, attributes = {})
 
 The `file_name` has to be relative to your images folder. HTML `attributes` (id, class, title, etc.) can be specified directly in the helper.
 
-The biggest advantage of using inline SVGs is being able to _have complete control over the different shapes using CSS and JavaScript_ (check the animation in the footer of the documentation website 😄).
+The biggest advantage of using inline SVGs is being able to _have complete control over the different shapes using CSS and JavaScript_ (check the animation in the footer of the documentation website 😎).
 
 You can find an example of embedding an SVG document and applying a class attribute in your `source/index.html.erb`:
 
