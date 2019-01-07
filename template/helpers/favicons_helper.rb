@@ -3,8 +3,6 @@ module FaviconsHelper
     icon_path = File.join(config[:images_dir], @app.data.site.favicon)
     favicons  = config[:favicons]
 
-    favicons.each { |favicon| add_output_to_favicon(favicon) }
-
     { icon_path => favicons }
   end
 
@@ -24,14 +22,6 @@ module FaviconsHelper
   end
 
   private
-
-  def add_output_to_favicon(favicon)
-    output_path = File.join(config[:images_dir], 'favicon')
-
-    return if favicon[:icon].include?(output_path)
-
-    favicon[:icon] = File.join(output_path, favicon[:icon])
-  end
 
   def auto_generate_favicon_tags
     icon_path = File.join(config[:images_dir], @app.data.site.favicon)
