@@ -1,5 +1,5 @@
 module FaviconsHelper
-  def generate_favicon_hash
+  def generate_favicons_hash
     icon_path = File.join(config[:images_dir], @app.data.site.favicon)
     favicons  = config[:favicons]
 
@@ -27,7 +27,7 @@ module FaviconsHelper
     icon_path = File.join(config[:images_dir], @app.data.site.favicon)
     tags      = []
 
-    generate_favicon_hash[icon_path].each do |favicon|
+    generate_favicons_hash[icon_path].each do |favicon|
       tags << tag(:link, favicon_tag_attributes(favicon))
     end
 

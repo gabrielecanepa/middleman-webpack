@@ -100,7 +100,7 @@ configure :build do
   set      :asset_host, @app.data.site.host
   set      :relative_links, true
   activate :asset_hash
-  activate :favicon_maker, icons: generate_favicon_hash
+  activate :favicon_maker, icons: generate_favicons_hash
   activate :gzip
   activate :minify_css
   activate :minify_html
