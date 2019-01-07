@@ -5,8 +5,8 @@ keywords:     "middleman, template, sass, yarn, webpack, babel, eslint, favicon"
 thumbnail:    "banner.jpg"
 favicon:      "_favicon.svg"
 base_color:   "#FBC547"
-license:      "https://gabriele.canepa.io/mit-license"
 repository:   "https://github.com/gabrielecanepa/middleman-webpack"
+license:      "https://gabriele.canepa.io/mit-license"
 geocoding:
   place:      "Lisbon, Portugal"
   latitude:   "38.7437396"
@@ -15,6 +15,7 @@ geocoding:
 author:
   name:       "Gabriele Canepa"
   email:      "gabriele@canepa.io"
-  website:    "https://gabriele.canepa.io"
-  github:     "https://github.com/gabrielecanepa"
   phone:      "+1-202-555-0130"
+  website:    "https://gabriele.canepa.io"
+  # Available social media tags: bitbucket dribbble facebook github gitlab instagram linkedin medium twitter
+  github:     "gabrielecanepa"

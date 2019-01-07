@@ -26,7 +26,6 @@ linters.each do |linter|
     puts Rainbow(
       "Checking your #{linter[:language]} style with #{linter[:name]}..."
     ).bright.orange
-    # show_linter_progress_bar(linter[:language], linter[:name])
     run_linter(linter[:command])
   end
   default_tasks << linter[:name].downcase.to_sym
