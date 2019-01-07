@@ -6,7 +6,7 @@ This is a template for [**Middleman 4**](https://middlemanapp.com).
 
 It integrates some of the best modern tools and snippets to create advanced static websites.
 
-It's mainly based on [**Yarn**](https://yarnpkg.com), a reliable and easy to use package manager, [**webpack**](https://webpack.js.org), a module bundler capable of packaging almost any kind of asset, and [**Sass**](https://sass-lang.com), the most powerful CSS extension language.
+It's mainly based on [**Yarn**](https://yarnpkg.com), a reliable and easy to use package manager, [**webpack**](https://webpack.js.org), a module bundler capable of packaging almost any kind of asset, and [**Sass**](https://sass-lang.com), one of the most powerful CSS extension language.
 
 All this combined with the simplicity of _Ruby and its gems_, some reinvented _powerful snippets_, and the _best available linters and debuggers_.
 
@@ -235,11 +235,11 @@ The repository comes configured with [**Yarn**](https://yarnpkg.com), [**webpack
 -   [Babel](https://babeljs.io) for JavaScript
 -   [style-loader](https://github.com/webpack-contrib/style-loader), [css-loader](https://github.com/webpack-contrib/css-loader), [postcss-loader](https://github.com/postcss/postcss-loader) and [sass-loader](https://github.com/webpack-contrib/sass-loader) for CSS and SCSS
 
-webpack has been integrated thanks to the in-built `external_pipeline` extension (find its configuration in `config.rb`), that allows Middleman to run multiple subprocesses.
+webpack has been integrated thanks to the in-built external pipeline extension (find its configuration in `config.rb`), that allows Middleman to run multiple subprocesses.
 
-Every time a server is run (in development or production), also the relative Yarn command gets executed (`yarn run start` or `yarn run build`), which runs in turn the right webpack process.
+Every time a server is run (in development or production), also the relative Yarn command gets executed (`yarn run start` or `yarn run build`), which runs, in turn, the right webpack process.
 
-> 💡 Want to setup your application with a different JavaScript pipeline? Have a look at the relative [Middleman documentation](https://middlemanapp.com/advanced/external-pipeline)
+> 💡 Want to set up your application with a different JavaScript pipeline? Have a look at the relative [Middleman documentation](https://middlemanapp.com/advanced/external-pipeline)
 
 #### Installing packages
 
@@ -249,9 +249,9 @@ Install a new package with the following command:
 yarn add <package-name> [--dev]
 ```
 
-In your JavaScript files, you can import modules from a packages with the `import` statement.
+In your JavaScript files, you can import modules from a package with the `import` statement.
 
-For instance, the documentation website uses [Tippy.js](https://atomiks.github.io/tippyjs) to display tooltips, and its default behavior was set after importing the `tippy` object from the package:
+For instance, the documentation website uses [Tippy.js](https://atomiks.github.io/tippyjs) to display tooltips, with this default values:
 
 ```javascript
 import tippy from "tippy.js";
@@ -266,12 +266,12 @@ tippy.setDefaults({
 
 #### Importing stylesheets
 
-You can import CSS and SCSS in your scripts with a normal `import` statement, thanks to the pre-installed webpack style loaders (webpack only bundles JavaScript by default, specific loaders are needed to bundle other kind of resources).
+You can also import CSS and SCSS in your scripts with an `import` statement followed by the path relative to the `node_modules` folder.
 
-For example, to import the default Tippy.js style, this line has to be added to our JavaScript:
+For example, to import the default grid style from Bootstrap:
 
 ```javascript
-import "tippy.js/dist/tippy.css";
+import "bootstrap/scss/_bootstrap-grid.scss";
 ```
 
 > 💡 You can also extract CSS into separate files with the [mini-css-extractor-plugin](https://www.npmjs.com/package/mini-css-extract-plugin)
@@ -280,7 +280,7 @@ import "tippy.js/dist/tippy.css";
 
 webpack it is capable of transforming, bundling, or packaging just about any resource or asset.
 
-If you want to understand and master the wide variety of tools and features that this tool offers, have a look at the [official webpack guides](https://webpack.js.org/guides).
+If you want to understand and master a wide variety of tools and features that this tool offers, have a look at the [official webpack guides](https://webpack.js.org/guides).
 
 ### Images
 
@@ -292,33 +292,12 @@ svg_tag(file_name, attributes = {})
 
 The `file_name` has to be relative to your images folder. HTML `attributes` (id, class, title, etc.) can be specified directly in the helper.
 
+The biggest advantage of using inline SVGs is being able to _have complete control over the different shapes using CSS and JavaScript_ (check the animation in the footer of the documentation website 😄).
+
 You can find an example of embedding an SVG document and applying a class attribute in your `source/index.html.erb`:
 
 ```erb
 <%= svg_tag "logo.svg", class: "middleman-logo" %>
-```
-
-The biggest advantage of using inline SVGs is being able to _have complete control over the different shapes using CSS and JavaScript_.
-
-For instance, different shapes composing the avatar in the footer of the documentation website have been animated thanks to this simple script:
-
-```javascript
-const mouth1 = document.getElementById("avatar-mouth-1");
-const mouth2 = document.getElementById("avatar-mouth-2");
-
-const showSmile = () => {
-  mouth1.style.display = "none";
-  mouth2.style.display = "block";
-};
-const showNormal = () => {
-  mouth2.style.display = "none";
-  mouth1.style.display = "block";
-};
-
-window.addEventListener("scroll", () => {
-  showSmile();
-  setTimeout(showNormal, 500);
-});
 ```
 
 ### Building and deploying
@@ -329,7 +308,7 @@ Finally, when you are ready to deliver static code, you will need to build the s
 $ middleman build
 ```
 
-This will create a static file for each file located in your source folder, and generate your webpack bundles and favicons.
+This will create a static file for each file located in your source folder, compile your webpack bundles, and generate the specified favicons.
 
 Any enabled build-time features (such as minification and compression) will be executed. You can find the extensions activated by default in the build-specific configuration section of your `config.rb`.
 
@@ -347,17 +326,17 @@ $ middleman deploy
 
 ### Testing and linters
 
-You can test your code thanks to the [Rake gem](https://github.com/ruby/rake), allowing you to write tests and tasks in standard Ruby syntax.
+You can test your code thanks to the [Rake gem](https://github.com/ruby/rake), allowing to write tests and tasks in standard Ruby syntax.
 
 By default, 3 tasks have been defined, each one testing the style for a specific language (JavaScript, SCSS and Ruby). Run them with the `rake` command:
 
 ![](https://github.com/gabrielecanepa/assets/raw/master/middleman-webpack/screen3.png?sanitize=true)
 
-If you are using [Atom](https://atom.io) as text editor, you can use [linter-eslint](https://atom.io/packages/linter-eslint), [linter-rubocop](https://atom.io/packages/linter-rubocop) and [linter-stylelint](https://atom.io/packages/linter-stylelint) to check your style while you write code. If you use [Sublime Text](https://www.sublimetext.com), have a look at the [ESLint](https://packagecontrol.io/packages/ESLint), [RuboCop](https://packagecontrol.io/packages/RuboCop) and [stylelint](https://packagecontrol.io/packages/SublimeLinter-stylelint) extensions.
+If you use [Atom](https://atom.io) as text editor, install [linter-eslint](https://atom.io/packages/linter-eslint), [linter-rubocop](https://atom.io/packages/linter-rubocop) and [linter-stylelint](https://atom.io/packages/linter-stylelint) to check your style while you write code. If you use [Sublime Text](https://www.sublimetext.com), have a look at the [ESLint](https://packagecontrol.io/packages/ESLint), [RuboCop](https://packagecontrol.io/packages/RuboCop) and [stylelint](https://packagecontrol.io/packages/SublimeLinter-stylelint) packages.
 
 ### 404 page
 
-A 404 page is already provided for you. Use it to display a custom design when visitors attempts to access pages that don’t exist:
+A simple 404 page has already been provided. Use it to display a custom page when visitors attempt to access paths that don’t exist:
 
 ![](https://github.com/gabrielecanepa/assets/raw/master/middleman-webpack/screen4.png?sanitize=true)
 
