@@ -1,5 +1,6 @@
-require 'thor/group'
+require 'json'
 require 'rainbow'
+require 'thor/group'
 
 module Middleman
   class Generator < ::Thor::Group
@@ -24,9 +25,12 @@ module Middleman
     end
 
     def initialize_git
+      package = open('template/package.json')
+      version = JSON.parse(package.read)['version']
+
       `git init`
       `git add .`
-      `git commit -m "Initialize new repository with middleman-webpack"`
+      `git commit -m "Initialize new repository with middleman-webpack-#{version}"`
     end
 
     def print_success_message
