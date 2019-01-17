@@ -25,12 +25,9 @@ module Middleman
     end
 
     def initialize_git
-      package = open('./template/package.json')
-      version = JSON.parse(package.read)['version']
-
       `git init`
       `git add .`
-      `git commit -m "Initialize new repository with middleman-webpack-#{version}"`
+      `git commit -m "Initialize new repository with middleman-webpack"`
     end
 
     def print_success_message
