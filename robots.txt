@@ -1,0 +1,4 @@
+User-Agent: *
+Allow: /
+
+Sitemap: http://gabrielecanepa.github.io/middleman-webpack/sitemap.xml
