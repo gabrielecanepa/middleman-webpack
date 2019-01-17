@@ -25,7 +25,7 @@ module Middleman
     end
 
     def initialize_git
-      package = open('template/package.json')
+      package = open('./template/package.json')
       version = JSON.parse(package.read)['version']
 
       `git init`
