@@ -270,11 +270,11 @@ yarn add <package-name> [--dev]
 In your JavaScript files, import modules from a package with an `import` statement:
 
 ```javascript
-import tippy from "tippy.js";
+import tippy from 'tippy.js';
 
 tippy.setDefaults({
   arrow: true,
-  arrowType: "round",
+  arrowType: 'round',
   duration: [275, 200],
   inertia: true
 });
@@ -287,7 +287,7 @@ You can also import CSS and SCSS in your scripts by following the path relative 
 For example, to import the default grid style from Bootstrap:
 
 ```javascript
-import "bootstrap/scss/_bootstrap-grid.scss";
+import 'bootstrap/scss/bootstrap-grid.scss';
 ```
 
 > 💡 If you want to extract CSS/SCSS into separate files check the [mini-css-extractor-plugin](https://www.npmjs.com/package/mini-css-extract-plugin)
