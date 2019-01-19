@@ -138,7 +138,7 @@ keywords: page, not, found
 ```
 
 > 💡 The full title option is set to true by default, and uses `-` as separator.
-> You can set this option to false to use an indipendant title, or change the symbol you want to use as separator (e.g. `<% set_meta_tags separator: '∙'`)
+> You can set this option to false to use an indipendant title, or change the symbol you want to use as separator (e.g. `<% set_meta_tags title: "Secondary page", separator: '∙' %>`)
 
 #### Favicon
 
@@ -214,7 +214,7 @@ Your `all.css.scss` just shows an overview of a suggested architecture and impor
 @import "base/site";
 ```
 
-> 💡 An example of this structure can be found in the [documentation website](https://github.com/gabrielecanepa/middleman-webpack-www/tree/master/source/assets/stylesheets)
+> 💡 An example of this structure can be found [here](https://github.com/gabrielecanepa/middleman-webpack-www/tree/master/source/assets/stylesheets)
 
 It's important to follow a similar structure to ensure the proper rendering of your style and respect CSS specificity:
 
@@ -224,11 +224,11 @@ Your website setting must be imported first and contain the variables, mixins an
 
 #### 2. Vendors
 
-External stylesheets must be imported right after your website settings, and before any eventual setting overriding the default vendor configuration.
+Import external stylesheets right after your website settings, and before any eventual setting overriding the default library configuration.
 
 Any stylesheet added with Yarn can be imported into your stylesheet files with an `@import` statement followed by the path relative to the `node_modules` folder.
 
-For instance, the documentation website has been bundled with [bootstrap](https://www.npmjs.com/package/bootstrap), and to load the grid style from the package the following line was added to `all.css.scss`:
+For instance, to load the grid style from [bootstrap](https://www.npmjs.com/package/bootstrap):
 
 ```scss
 @import "bootstrap/scss/bootstrap-grid";
@@ -251,9 +251,9 @@ The last files to be imported must contain the actual style of your website:
 The repository comes configured with [**Yarn**](https://yarnpkg.com), [**webpack**](https://webpack.js.org) and the following loaders:
 
 -   [Babel](https://babeljs.io) for JavaScript
--   [style-loader](https://github.com/webpack-contrib/style-loader), [css-loader](https://github.com/webpack-contrib/css-loader), [postcss-loader](https://github.com/postcss/postcss-loader) and [sass-loader](https://github.com/webpack-contrib/sass-loader) for CSS and SCSS
+-   [style-loader](https://github.com/webpack-contrib/style-loader), [css-loader](https://github.com/webpack-contrib/css-loader), and [sass-loader](https://github.com/webpack-contrib/sass-loader) for CSS and SCSS
 
-webpack has been integrated thanks to the in-built external pipeline extension (find its configuration in `config.rb`), that allows Middleman to run multiple subprocesses.
+webpack has been integrated thanks to the in-built external pipeline extension (find the configuration in `config.rb`), that allows Middleman to run multiple subprocesses.
 
 Every time a server is run (in development or production), also the relative Yarn command gets executed (`yarn run start` or `yarn run build`), which runs, in turn, the right webpack process.
 
@@ -267,7 +267,7 @@ You can install a new package with the following command:
 yarn add <package-name> [--dev]
 ```
 
-In your JavaScript files, import modules from a package with an `import` statement:
+In your JavaScript files, import modules from a package with the `import` command:
 
 ```javascript
 import tippy from 'tippy.js';
@@ -284,7 +284,7 @@ tippy.setDefaults({
 
 You can also import CSS and SCSS in your scripts by following the path relative to the `node_modules` folder.
 
-For example, to import the default grid style from Bootstrap:
+For example, to import the same Bootstrap grid style:
 
 ```javascript
 import 'bootstrap/scss/bootstrap-grid.scss';
@@ -306,11 +306,11 @@ You can embed inline SVG icons in your views thanks to the `svg_tag` helper:
 svg_tag(file_name, attributes = {})
 ```
 
-The `file_name` has to be relative to your images folder. HTML `attributes` (id, class, title, etc.) can be specified directly in the helper.
+The `file_name` has to be relative to your images folder. HTML `attributes` (id, class, title, etc.) can be specified directly with the helper.
 
 The biggest advantage of using inline SVGs is being able to have complete control over the different shapes using CSS and JavaScript (check the footer of the documentation website 😎).
 
-You can find an example of embedding an SVG document and applying a class attribute in your `source/index.html.erb`:
+You can find an example in your `source/index.html.erb`:
 
 ```erb
 <%= svg_tag "logo.svg", class: "middleman-logo" %>
@@ -318,7 +318,7 @@ You can find an example of embedding an SVG document and applying a class attrib
 
 ### Building and deploying
 
-Finally, when you are ready to deliver static code, you will need to build the site. Using the command-line, from the project folder, run the correspondent Middleman command:
+Finally, when you are ready to deliver static code, you will need to build the site. Using the command-line, from the project folder, run the corresponding Middleman command:
 
 ```bash
 $ middleman build
@@ -326,7 +326,7 @@ $ middleman build
 
 This will create a static file for each file located in your source folder, compile your webpack bundles, and generate the specified favicons.
 
-Any enabled build-time features (such as minification and compression) will be executed. You can find the extensions activated by default in the build-specific section of your `config.rb`.
+Any enabled build-time features (such as minification and compression) will be executed. You can find the extensions already activated in the build-specific section of your `config.rb`.
 
 After building the site you will have everything you need within the `build` directory.
 
@@ -342,17 +342,17 @@ $ middleman deploy
 
 ### Testing and linters
 
-You can test your code thanks to the [Rake gem](https://github.com/ruby/rake), allowing to write tests and tasks in standard Ruby syntax.
+You can test your code thanks to the [Rake gem](https://github.com/ruby/rake), that allows to write tests and tasks in standard Ruby syntax.
 
 By default, 3 tasks have been defined, each one testing the style for a specific language (JavaScript, SCSS and Ruby). Run them with the `rake` command:
 
 ![](https://github.com/gabrielecanepa/assets/raw/master/middleman-webpack/screen3.png?sanitize=true)
 
-If you use [Atom](https://atom.io) as text editor, you can install [linter-eslint](https://atom.io/packages/linter-eslint), [linter-rubocop](https://atom.io/packages/linter-rubocop) and [linter-stylelint](https://atom.io/packages/linter-stylelint) to check your style while you write code. If you use [Sublime Text](https://www.sublimetext.com), have a look at the [ESLint](https://packagecontrol.io/packages/ESLint), [RuboCop](https://packagecontrol.io/packages/RuboCop) and [stylelint](https://packagecontrol.io/packages/SublimeLinter-stylelint) packages.
+If you use [Atom](https://atom.io) as text editor, you can install [linter-eslint](https://atom.io/packages/linter-eslint), [linter-rubocop](https://atom.io/packages/linter-rubocop) and [linter-stylelint](https://atom.io/packages/linter-stylelint) to check your style while you type. If you use [Sublime Text](https://www.sublimetext.com), have a look at the [ESLint](https://packagecontrol.io/packages/ESLint), [RuboCop](https://packagecontrol.io/packages/RuboCop) and [stylelint](https://packagecontrol.io/packages/SublimeLinter-stylelint) packages.
 
 ### 404 page
 
-A simple 404 page has already been provided. Use it to display a custom page when visitors attempt to access paths that don’t exist:
+A simple 404 page has already been provided. Use it to display a custom page when visitors attempt to access paths that you haven't defined:
 
 ![](https://github.com/gabrielecanepa/assets/raw/master/middleman-webpack/screen4.png?sanitize=true)
 
