@@ -70,6 +70,7 @@ All this combined with the simplicity of _Ruby and its gems_, some reinvented _p
 You must have the following tools installed to use this boilerplate:
 
 -   [Bundler](https://bundler.io)
+-   [Rainbow](https://github.com/sickill/rainbow) - `gem install rainbow`
 -   [Node](https://nodejs.org) (> v4)
 -   [Yarn](https://yarnpkg.com)
 
