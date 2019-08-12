@@ -366,4 +366,4 @@ A simple 404 page has already been provided. Use it to display a custom page whe
 
 ## License
 
-[![](https://github.com/gabrielecanepa/assets/raw/master/badges/mit.svg?sanitize=true)](https://gabriele.canepa.io/mit)
+[MIT](https://gabrielecanepa.mit-license.org)
