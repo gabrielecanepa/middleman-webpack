@@ -1,4 +1,4 @@
-![](https://github.com/gabrielecanepa/assets/raw/master/middleman-webpack/banner.jpg?sanitize=true)
+![](https://github.com/gabrielecanepa/middleman-webpack/raw/master/images/banner.jpg?sanitize=true)
 
 # Middleman webpack
 
@@ -12,20 +12,34 @@ All this combined with the simplicity of _Ruby and its gems_, some reinvented _p
 
 ## Table of contents
 
--   [What's included?](#whats-included)
--   [Dependencies](#dependencies)
--   [Installation](#installation)
--   [Usage](#usage)
-    -   [Getting started](#getting-started)
-    -   [Styling](#styling)
-    -   [Using Yarn and webpack](#using-yarn-and-webpack)
-    -   [Images](#images)
-    -   [Building and deploying](#building-and-deploying)
--   [Extra](#extra)
-    -   [Testing and linters](#testing-and-linters)
-    -   [404 page](#404-page)
--   [Contributing](#contributing)
--   [License](#license)
+- [Middleman webpack](#middleman-webpack)
+  - [Table of contents](#table-of-contents)
+  - [What's included?](#whats-included)
+      - [Core](#core)
+      - [Middleman extensions](#middleman-extensions)
+      - [Snippets](#snippets)
+      - [Linters](#linters)
+      - [Debuggers](#debuggers)
+  - [Dependencies](#dependencies)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [Getting started](#getting-started)
+      - [Favicon](#favicon)
+    - [Styling](#styling)
+      - [1. Settings](#1-settings)
+      - [2. Vendors](#2-vendors)
+      - [3. Style](#3-style)
+    - [Using Yarn and webpack](#using-yarn-and-webpack)
+      - [Installing packages](#installing-packages)
+      - [Importing stylesheets](#importing-stylesheets)
+      - [Advanced configuration](#advanced-configuration)
+    - [Images](#images)
+    - [Building and deploying](#building-and-deploying)
+  - [Extra](#extra)
+    - [Testing and linters](#testing-and-linters)
+    - [404 page](#404-page)
+  - [Contributing](#contributing)
+  - [License](#license)
 
 ## What's included?
 
@@ -114,11 +128,11 @@ The properties you set up here will be used by the `auto_display_meta_tag` helpe
 
 The default configuration
 
-![](https://github.com/gabrielecanepa/assets/raw/master/middleman-webpack/screen1.png?sanitize=true)
+![](https://github.com/gabrielecanepa/middleman-webpack/raw/master/images/screen1.png?sanitize=true)
 
 produces the following tags for the homepage:
 
-![](https://github.com/gabrielecanepa/assets/raw/master/middleman-webpack/screen2.png?sanitize=true)
+![](https://github.com/gabrielecanepa/middleman-webpack/raw/master/images/screen2.png?sanitize=true)
 
 Any tag can be overwritten (or created) in each page or layout with the `set_meta_tag` helper (see `source/index.html.erb`)
 
@@ -346,7 +360,7 @@ You can test your code thanks to the [Rake gem](https://github.com/ruby/rake), t
 
 By default, 3 tasks have been defined, each one testing the style for a specific language (JavaScript, SCSS and Ruby). Run them with the `rake` command:
 
-![](https://github.com/gabrielecanepa/assets/raw/master/middleman-webpack/screen3.png?sanitize=true)
+![](https://github.com/gabrielecanepa/middleman-webpack/raw/master/images/screen3.png?sanitize=true)
 
 If you use [Atom](https://atom.io) as text editor, you can install [linter-eslint](https://atom.io/packages/linter-eslint), [linter-rubocop](https://atom.io/packages/linter-rubocop) and [linter-stylelint](https://atom.io/packages/linter-stylelint) to check your style while you type. If you use [Sublime Text](https://www.sublimetext.com), have a look at the [ESLint](https://packagecontrol.io/packages/ESLint), [RuboCop](https://packagecontrol.io/packages/RuboCop) and [stylelint](https://packagecontrol.io/packages/SublimeLinter-stylelint) packages.
 
@@ -354,7 +368,7 @@ If you use [Atom](https://atom.io) as text editor, you can install [linter-eslin
 
 A simple 404 page has already been provided. Use it to display a custom page when visitors attempt to access paths that you haven't defined:
 
-![](https://github.com/gabrielecanepa/assets/raw/master/middleman-webpack/screen4.png?sanitize=true)
+![](https://github.com/gabrielecanepa/middleman-webpack/raw/master/images/screen4.png?sanitize=true)
 
 ## Contributing
 
