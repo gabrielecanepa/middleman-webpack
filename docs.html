@@ -1,18 +1,231 @@
-<!DOCTYPE html> <html> <head> <meta charset=utf-8 /> <meta name=viewport content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/> <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"/> <title>Docs - Middleman webpack</title> <meta name=description content="🏗 Scalable ready-to-use Middleman 4 template"/> <meta name=keywords content="middleman, template, sass, yarn, webpack, babel, eslint, favicon"/> <meta itemprop=name content=Docs /> <meta itemprop=description content="🏗 Scalable ready-to-use Middleman 4 template"/> <meta itemprop=image content="http://gabrielecanepa.github.io/middleman-webpack/assets/images/banner-1e758088.jpg"/> <meta name="twitter:card" content=summary_large_image /> <meta name="twitter:site" content="Middleman webpack"/> <meta name="twitter:url" content="http://gabrielecanepa.github.io/middleman-webpack/docs.html"/> <meta name="twitter:title" content=Docs /> <meta name="twitter:description" content="🏗 Scalable ready-to-use Middleman 4 template"/> <meta name="twitter:image" content="http://gabrielecanepa.github.io/middleman-webpack/assets/images/banner-1e758088.jpg"/> <meta property="og:url" content="http://gabrielecanepa.github.io/middleman-webpack/docs.html"/> <meta property="og:type" content=website /> <meta property="og:title" content=Docs /> <meta property="og:image" content="http://gabrielecanepa.github.io/middleman-webpack/assets/images/banner-1e758088.jpg"/> <meta property="og:description" content="🏗 Scalable ready-to-use Middleman 4 template"/> <meta property="og:site_name" content="Middleman webpack"/> <meta property="og:locale" content=en_US /> <meta name=theme-color content="#FBC547"/> <meta name=msapplication-TileColor content="#FBC547"/> <meta name="geo.placename" content="Lisbon, Portugal"/> <meta name="geo.region" content=PT-17 /> <meta name="geo:position" content="38.7437396;9.2302437"/> <meta name=ICBM content="38.7437396, 9.2302437"/> <link rel=author href="https://gabriele.canepa.io"/> <link rel=license href="https://gabriele.canepa.io/mit-license"/> <link rel=me href="https://gabriele.canepa.io"/> <link rel=me href="mailto:gabriele@canepa.io"/> <link rel=me href="https://github.com/gabrielecanepa"/> <link rel=me href="https://linkedin.com/in/gabrielecanepa"/> <meta name=theme-color content="#FBC547"/> <meta name=msapplication-TileColor content="#FBC547"/> <link rel=apple-touch-icon sizes=180x180 href="apple-touch-icon.png"/> <link rel=icon type="image/png" sizes=32x32 href="favicon32x32.png"/> <link rel=icon type="image/png" sizes=16x16 href="favicon16x16.png"/> <link rel="shortcut icon" sizes="64x64,32x32,24x24,16x16" href="favicon.ico"/> <link href="assets/stylesheets/all-cbff61d2.css" rel=stylesheet /> </head> <body> <nav class=navbar> <a href="./" class="navbar-link site-name">Middleman webpack</a> <div class=navbar-right> <a href="docs.html" class=navbar-link>Docs</a> <a href="https://github.com/gabrielecanepa/middleman-webpack" class=navbar-link>GitHub</a> <a href="https://middlemanapp.com" target=_blank class=navbar-link>Middleman website</a> </div> </nav> <div class=container-fluid> <div class=row> <div class="d-none d-lg-block col-lg-3 px-0"> <div class=sidebar> </div> </div> <div class="col-12 col-lg-9"> <main class=docs> <h1 id=middleman-webpack>Middleman webpack</h1> <p>This is a template for <a href="https://middlemanapp.com"><strong>Middleman 4</strong></a>.</p> <p>It integrates some of the best modern tools and snippets to create advanced static websites.</p> <p>It&#39;s mainly based on <a href="https://yarnpkg.com"><strong>Yarn</strong></a>, a reliable and easy to use package manager, <a href="https://webpack.js.org"><strong>webpack</strong></a>, a module bundler capable of packaging almost any kind of asset, and <a href="https://sass-lang.com"><strong>Sass</strong></a>, one of the most powerful CSS extension language.</p> <p>All this combined with the simplicity of <em>Ruby and its gems</em>, some reinvented <em>powerful snippets</em>, and the <em>best available linters and debuggers</em>.</p> <h2 id=whats-included>What&#39;s included?</h2> <h4 id=core>Core</h4> <ul> <li> <a href="https://middlemanapp.com">Middleman</a></li> <li> <a href="https://yarnpkg.com">Yarn</a></li> <li> <a href="https://webpack.js.org">webpack</a> with <a href="https://babeljs.org">Babel</a></li> <li> <a href="https://sass-lang.com">Sass</a></li> </ul> <h4 id=middleman-extensions>Middleman extensions</h4> <ul> <li> <a href="https://github.com/middleman/middleman-autoprefixer">Autoprefixer</a></li> <li> <a href="https://github.com/karlfreeman/middleman-deploy">Deploy</a></li> <li> <a href="https://github.com/karlfreeman/middleman-dotenv">Dotenv</a></li> <li> <a href="https://github.com/follmann/middleman-favicon-maker">Favicon maker</a></li> <li> <a href="https://github.com/middleman/middleman-livereload">Livereload</a></li> <li> <a href="https://github.com/gabrielecanepa/middleman-meta-tags">Meta tags</a></li> <li> <a href="https://github.com/middleman/middleman-minify-html">Minify HTML</a></li> <li> <a href="https://github.com/AndrewKvalheim/middleman-pry">Pry</a></li> <li> <a href="https://github.com/yterajima/middleman-robots">Robots</a></li> </ul> <h4 id=snippets>Snippets</h4> <ul> <li> <a href="#images">Inline SVGs</a></li> <li> <a href="#favicon">Favicon helper</a></li> <li> <a href="#404-page">404 page</a></li> </ul> <h4 id=linters>Linters</h4> <ul> <li> <a href="https://eslint.org">ESLint</a> for JavaScript</li> <li> <a href="https://github.com/rubocop-hq/rubocop">RuboCop</a> for Ruby</li> <li> <a href="https://stylelint.io">stylelint</a> for SCSS</li> </ul> <h4 id=debuggers>Debuggers</h4> <ul> <li> <a href="https://github.com/deivid-rodriguez/pry-byebug">Pry-byebug</a></li> <li> <a href="https://github.com/ruby/rake">Rake</a></li> </ul> <h2 id=dependencies>Dependencies</h2> <p>You must have the following tools installed to use this boilerplate:</p> <ul> <li> <a href="https://bundler.io">Bundler</a></li> <li> <a href="https://nodejs.org">Node</a> (&gt; v4)</li> <li> <a href="https://yarnpkg.com">Yarn</a></li> </ul> <h2 id=installation>Installation</h2> <p>Start a new project in your current directory</p> <div class=highlight><pre class="highlight-syntax shell"><code><span class="nv">$ </span>middleman init <span class="nt">-T</span> gabrielecanepa/middleman-webpack
-</code></pre></div> <p>or in a new one:</p> <div class=highlight><pre class="highlight-syntax shell"><code><span class="nv">$ </span>middleman init &lt;project-name&gt; <span class="nt">-T</span> gabrielecanepa/middleman-webpack
-</code></pre></div> <p>You can also set up an alias like <code>middleman:webpack</code> in one of your shell profiles</p> <div class=highlight><pre class="highlight-syntax shell"><code><span class="c"># ~/.bash_profile</span>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>Docs - Middleman webpack</title>
+    <meta name="description" content="🏗 Scalable ready-to-use Middleman 4 template" />
+    <meta name="keywords" content="middleman, template, sass, yarn, webpack, babel, eslint, favicon" />
+    <meta itemprop="name" content="Docs" />
+    <meta itemprop="description" content="🏗 Scalable ready-to-use Middleman 4 template" />
+    <meta itemprop="image" content="images/banner-1e758088.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="Middleman webpack" />
+    <meta name="twitter:url" content="http://gabrielecanepa.github.io/middleman-webpack/docs.html" />
+    <meta name="twitter:title" content="Docs" />
+    <meta name="twitter:description" content="🏗 Scalable ready-to-use Middleman 4 template" />
+    <meta
+      name="twitter:image"
+      content="http://gabrielecanepa.github.io/middleman-webpack/assets/images/banner-1e758088.jpg"
+    />
+    <meta property="og:url" content="http://gabrielecanepa.github.io/middleman-webpack/docs.html" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Docs" />
+    <meta
+      property="og:image"
+      content="http://gabrielecanepa.github.io/middleman-webpack/assets/images/banner-1e758088.jpg"
+    />
+    <meta property="og:description" content="🏗 Scalable ready-to-use Middleman 4 template" />
+    <meta property="og:site_name" content="Middleman webpack" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="theme-color" content="#FBC547" />
+    <meta name="msapplication-TileColor" content="#FBC547" />
+    <meta name="geo.placename" content="Lisbon, Portugal" />
+    <meta name="geo.region" content="PT-17" />
+    <meta name="geo:position" content="38.7437396;9.2302437" />
+    <meta name="ICBM" content="38.7437396, 9.2302437" />
+    <link rel="author" href="https://gabrielecanepa.com" />
+    <link rel="license" href="https://gabrielecanepa.com/mit-license" />
+    <link rel="me" href="https://gabrielecanepa.com" />
+    <link rel="me" href="mailto:gabriele@canepa.io" />
+    <link rel="me" href="https://github.com/gabrielecanepa" />
+    <link rel="me" href="https://linkedin.com/in/gabrielecanepa" />
+    <meta name="theme-color" content="#FBC547" />
+    <meta name="msapplication-TileColor" content="#FBC547" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon16x16.png" />
+    <link rel="shortcut icon" sizes="64x64,32x32,24x24,16x16" href="favicon.ico" />
+    <link href="assets/stylesheets/all-cbff61d2.css" rel="stylesheet" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="./" class="navbar-link site-name">Middleman webpack</a>
+      <div class="navbar-right">
+        <a href="docs.html" class="navbar-link">Docs</a>
+        <a href="https://github.com/gabrielecanepa/middleman-webpack" class="navbar-link">GitHub</a>
+        <a href="https://middlemanapp.com" target="_blank" class="navbar-link">Middleman website</a>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="d-none d-lg-block col-lg-3 px-0"><div class="sidebar"></div></div>
+        <div class="col-12 col-lg-9">
+          <main class="docs">
+            <h1 id="middleman-webpack">Middleman webpack</h1>
+            <p>
+              This is a template for <a href="https://middlemanapp.com"><strong>Middleman 4</strong></a
+              >.
+            </p>
+            <p>It integrates some of the best modern tools and snippets to create advanced static websites.</p>
+            <p>
+              It&#39;s mainly based on <a href="https://yarnpkg.com"><strong>Yarn</strong></a
+              >, a reliable and easy to use package manager,
+              <a href="https://webpack.js.org"><strong>webpack</strong></a
+              >, a module bundler capable of packaging almost any kind of asset, and
+              <a href="https://sass-lang.com"><strong>Sass</strong></a
+              >, one of the most powerful CSS extension language.
+            </p>
+            <p>
+              All this combined with the simplicity of <em>Ruby and its gems</em>, some reinvented
+              <em>powerful snippets</em>, and the <em>best available linters and debuggers</em>.
+            </p>
+            <h2 id="whats-included">What&#39;s included?</h2>
+            <h4 id="core">Core</h4>
+            <ul>
+              <li><a href="https://middlemanapp.com">Middleman</a></li>
+              <li><a href="https://yarnpkg.com">Yarn</a></li>
+              <li><a href="https://webpack.js.org">webpack</a> with <a href="https://babeljs.org">Babel</a></li>
+              <li><a href="https://sass-lang.com">Sass</a></li>
+            </ul>
+            <h4 id="middleman-extensions">Middleman extensions</h4>
+            <ul>
+              <li><a href="https://github.com/middleman/middleman-autoprefixer">Autoprefixer</a></li>
+              <li><a href="https://github.com/karlfreeman/middleman-deploy">Deploy</a></li>
+              <li><a href="https://github.com/karlfreeman/middleman-dotenv">Dotenv</a></li>
+              <li><a href="https://github.com/follmann/middleman-favicon-maker">Favicon maker</a></li>
+              <li><a href="https://github.com/middleman/middleman-livereload">Livereload</a></li>
+              <li><a href="https://github.com/gabrielecanepa/middleman-meta-tags">Meta tags</a></li>
+              <li><a href="https://github.com/middleman/middleman-minify-html">Minify HTML</a></li>
+              <li><a href="https://github.com/AndrewKvalheim/middleman-pry">Pry</a></li>
+              <li><a href="https://github.com/yterajima/middleman-robots">Robots</a></li>
+            </ul>
+            <h4 id="snippets">Snippets</h4>
+            <ul>
+              <li><a href="#images">Inline SVGs</a></li>
+              <li><a href="#favicon">Favicon helper</a></li>
+              <li><a href="#404-page">404 page</a></li>
+            </ul>
+            <h4 id="linters">Linters</h4>
+            <ul>
+              <li><a href="https://eslint.org">ESLint</a> for JavaScript</li>
+              <li><a href="https://github.com/rubocop-hq/rubocop">RuboCop</a> for Ruby</li>
+              <li><a href="https://stylelint.io">stylelint</a> for SCSS</li>
+            </ul>
+            <h4 id="debuggers">Debuggers</h4>
+            <ul>
+              <li><a href="https://github.com/deivid-rodriguez/pry-byebug">Pry-byebug</a></li>
+              <li><a href="https://github.com/ruby/rake">Rake</a></li>
+            </ul>
+            <h2 id="dependencies">Dependencies</h2>
+            <p>You must have the following tools installed to use this boilerplate:</p>
+            <ul>
+              <li><a href="https://bundler.io">Bundler</a></li>
+              <li><a href="https://nodejs.org">Node</a> (&gt; v4)</li>
+              <li><a href="https://yarnpkg.com">Yarn</a></li>
+            </ul>
+            <h2 id="installation">Installation</h2>
+            <p>Start a new project in your current directory</p>
+            <div class="highlight">
+              <pre
+                class="highlight-syntax shell"
+              ><code><span class="nv">$ </span>middleman init <span class="nt">-T</span> gabrielecanepa/middleman-webpack
+</code></pre>
+            </div>
+            <p>or in a new one:</p>
+            <div class="highlight">
+              <pre
+                class="highlight-syntax shell"
+              ><code><span class="nv">$ </span>middleman init &lt;project-name&gt; <span class="nt">-T</span> gabrielecanepa/middleman-webpack
+</code></pre>
+            </div>
+            <p>You can also set up an alias like <code>middleman:webpack</code> in one of your shell profiles</p>
+            <div class="highlight">
+              <pre class="highlight-syntax shell"><code><span class="c"># ~/.bash_profile</span>
 <span class="nb">alias </span>middleman:webpack<span class="o">=</span><span class="s2">"middleman init </span><span class="nv">$1</span><span class="s2"> gabrielecanepa/middleman-webpack"</span>
-</code></pre></div> <p>and use it to quickly initialize a new project.</p> <h2 id=usage>Usage</h2> <blockquote> <p>💡 A good usage example, that will be used through this wiki, is the same <a href="https://github.com/gabrielecanepa/middleman-webpack-www">documentation website</a> of the template</p> </blockquote> <div class=highlight><pre class="highlight-syntax shell"><code><span class="nv">$ </span>middleman server   <span class="c"># Run a local server</span>
+</code></pre>
+            </div>
+            <p>and use it to quickly initialize a new project.</p>
+            <h2 id="usage">Usage</h2>
+            <blockquote>
+              <p>
+                💡 A good usage example, that will be used through this wiki, is the same
+                <a href="https://github.com/gabrielecanepa/middleman-webpack-www">documentation website</a> of the
+                template
+              </p>
+            </blockquote>
+            <div class="highlight">
+              <pre
+                class="highlight-syntax shell"
+              ><code><span class="nv">$ </span>middleman server   <span class="c"># Run a local server</span>
 <span class="nv">$ </span>middleman build    <span class="c"># Build the static files</span>
 <span class="nv">$ </span>middleman deploy   <span class="c"># Deploy the built site</span>
-</code></pre></div> <h3 id=getting-started>Getting started</h3> <p>You&#39;ll find the main settings of your website in <code>data/site.yml</code>.</p> <p>The properties you set up here will be used by the <code>auto_display_meta_tag</code> helper to inject specific tags in your views.</p> <p>The default configuration</p> <p><img src="https://github.com/gabrielecanepa/assets/raw/master/middleman-webpack/screen1.png?sanitize=true" alt=Screen1 /></p> <p>produces the following tags for the homepage:</p> <p><img src="https://github.com/gabrielecanepa/assets/raw/master/middleman-webpack/screen2.png?sanitize=true" alt=Screen2 /></p> <p>Any tag can be overwritten (or created) in each page or layout with the <code>set_meta_tag</code> helper (see <code>source/index.html.erb</code>)</p> <div class=highlight><pre class="highlight-syntax erb"><code><span class="cp">&lt;%</span> <span class="n">set_meta_tags</span> <span class="ss">title: </span><span class="n">data</span><span class="p">.</span><span class="nf">site</span><span class="p">.</span><span class="nf">name</span> <span class="o">+</span> <span class="s2">": "</span> <span class="o">+</span> <span class="n">data</span><span class="p">.</span><span class="nf">site</span><span class="p">.</span><span class="nf">description</span><span class="p">,</span>
+</code></pre>
+            </div>
+            <h3 id="getting-started">Getting started</h3>
+            <p>You&#39;ll find the main settings of your website in <code>data/site.yml</code>.</p>
+            <p>
+              The properties you set up here will be used by the <code>auto_display_meta_tag</code> helper to inject
+              specific tags in your views.
+            </p>
+            <p>The default configuration</p>
+            <p><img src="assets/images/screen1.png" alt="" /></p>
+            <p>produces the following tags for the homepage:</p>
+            <p><img src="assets/images/screen2.png" alt="" /></p>
+            <p>
+              Any tag can be overwritten (or created) in each page or layout with the <code>set_meta_tag</code> helper
+              (see <code>source/index.html.erb</code>)
+            </p>
+            <div class="highlight">
+              <pre
+                class="highlight-syntax erb"
+              ><code><span class="cp">&lt;%</span> <span class="n">set_meta_tags</span> <span class="ss">title: </span><span class="n">data</span><span class="p">.</span><span class="nf">site</span><span class="p">.</span><span class="nf">name</span> <span class="o">+</span> <span class="s2">": "</span> <span class="o">+</span> <span class="n">data</span><span class="p">.</span><span class="nf">site</span><span class="p">.</span><span class="nf">description</span><span class="p">,</span>
                  <span class="ss">full_title: </span><span class="kp">false</span> <span class="cp">%&gt;</span>
-</code></pre></div> <p>or <a href="https://middlemanapp.com/basics/frontmatter">frontmatter</a> (see <code>source/404.html.erb</code>):</p> <div class=highlight><pre class="highlight-syntax yaml"><code><span class="nn">---</span>
+</code></pre>
+            </div>
+            <p>
+              or <a href="https://middlemanapp.com/basics/frontmatter">frontmatter</a> (see
+              <code>source/404.html.erb</code>):
+            </p>
+            <div class="highlight">
+              <pre class="highlight-syntax yaml"><code><span class="nn">---</span>
 <span class="na">title</span><span class="pi">:</span> <span class="s">Page not found</span>
 <span class="na">description</span><span class="pi">:</span> <span class="s">This page was not found by Middleman webpack 🤔</span>
 <span class="na">keywords</span><span class="pi">:</span> <span class="s">page, not, found</span>
 <span class="nn">---</span>
-</code></pre></div> <blockquote> <p>💡 The full title option is set to true by default, and uses <code>-</code> as separator. You can set this option to false to use an indipendant title, or change the symbol you want to use as separator (e.g. <code>&lt;% set_meta_tags title: &quot;Secondary page&quot;, separator: &#39;∙&#39; %&gt;</code>)</p> </blockquote> <h4 id=favicon>Favicon</h4> <p>The icon you specify in the <strong>favicon</strong> field (<code>_favicon.svg</code> by default) must be relative to <code>source/assets/images</code>.</p> <p>The leading underscore prevents it from being copied into the build directory. The image format should be either PNG or SVG.</p> <p>In production, it will be used to generate your favicons and show the correspondent tags in your layouts, thanks to the <code>auto_display_favicon_tags</code> helper.</p> <p>You can change the favicons you want to produce in your <code>config.rb</code>, and the tags generated by the helper will change dynamically.</p> <p>The favicons set by default</p> <div class=highlight><pre class="highlight-syntax ruby"><code><span class="c1"># config.rb</span>
+</code></pre>
+            </div>
+            <blockquote>
+              <p>
+                💡 The full title option is set to true by default, and uses <code>-</code> as separator. You can set
+                this option to false to use an indipendant title, or change the symbol you want to use as separator
+                (e.g. <code>&lt;% set_meta_tags separator: &#39;∙&#39;</code>)
+              </p>
+            </blockquote>
+            <h4 id="favicon">Favicon</h4>
+            <p>
+              The icon you specify in the <strong>favicon</strong> field (<code>_favicon.svg</code> by default) must be
+              relative to <code>source/assets/images</code>.
+            </p>
+            <p>
+              The leading underscore prevents it from being copied into the build directory. The image format should be
+              either PNG or SVG.
+            </p>
+            <p>
+              In production, it will be used to generate your favicons and show the correspondent tags in your layouts,
+              thanks to the <code>auto_display_favicon_tags</code> helper.
+            </p>
+            <p>
+              You can change the favicons you want to produce in your <code>config.rb</code>, and the tags generated by
+              the helper will change dynamically.
+            </p>
+            <p>The favicons set by default</p>
+            <div class="highlight">
+              <pre class="highlight-syntax ruby"><code><span class="c1"># config.rb</span>
 <span class="n">set</span> <span class="ss">:favicons</span><span class="p">,</span> <span class="p">[</span>
   <span class="p">{</span>
     <span class="ss">rel: </span><span class="s1">'apple-touch-icon'</span><span class="p">,</span>
@@ -37,11 +250,29 @@
     <span class="ss">icon: </span><span class="s1">'favicon.ico'</span>
   <span class="p">}</span>
 <span class="p">]</span>
-</code></pre></div> <p>generate the following tags and relative icons:</p> <div class=highlight><pre class="highlight-syntax html"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"apple-touch-icon"</span> <span class="na">sizes=</span><span class="s">"180x180"</span> <span class="na">href=</span><span class="s">"apple-touch-icon.png"</span><span class="nt">&gt;</span>
+</code></pre>
+            </div>
+            <p>generate the following tags and relative icons:</p>
+            <div class="highlight">
+              <pre
+                class="highlight-syntax html"
+              ><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"apple-touch-icon"</span> <span class="na">sizes=</span><span class="s">"180x180"</span> <span class="na">href=</span><span class="s">"apple-touch-icon.png"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"icon"</span> <span class="na">type=</span><span class="s">"image/png"</span> <span class="na">sizes=</span><span class="s">"32x32"</span> <span class="na">href=</span><span class="s">"favicon32x32.png"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"icon"</span> <span class="na">type=</span><span class="s">"image/png"</span> <span class="na">sizes=</span><span class="s">"16x16"</span> <span class="na">href=</span><span class="s">"favicon16x16.png"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"shortcut icon"</span> <span class="na">sizes=</span><span class="s">"64x64,32x32,24x24,16x16"</span> <span class="na">href=</span><span class="s">"favicon.ico"</span><span class="nt">&gt;</span>
-</code></pre></div> <h3 id=styling>Styling</h3> <p>Each application has different design needs, that&#39;s why the template doesn&#39;t include any CSS or built-in solution.</p> <p>Your <code>all.css.scss</code> just shows an overview of a suggested architecture and imports the default Middleman style:</p> <div class=highlight><pre class="highlight-syntax scss"><code><span class="c1">// Suggested structure:
+</code></pre>
+            </div>
+            <h3 id="styling">Styling</h3>
+            <p>
+              Each application has different design needs, that&#39;s why the template doesn&#39;t include any CSS or
+              built-in solution.
+            </p>
+            <p>
+              Your <code>all.css.scss</code> just shows an overview of a suggested architecture and imports the default
+              Middleman style:
+            </p>
+            <div class="highlight">
+              <pre class="highlight-syntax scss"><code><span class="c1">// Suggested structure:
 // 1. Settings
 //    ├── settings/
 // 2. Vendors
@@ -56,31 +287,329 @@
 <span class="k">@import</span> <span class="s2">"settings/colors"</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">"settings/fonts"</span><span class="p">;</span>
 <span class="k">@import</span> <span class="s2">"base/site"</span><span class="p">;</span>
-</code></pre></div> <blockquote> <p>💡 An example of this structure can be found <a href="https://github.com/gabrielecanepa/middleman-webpack-www/tree/master/source/assets/stylesheets">here</a></p> </blockquote> <p>It&#39;s important to follow a similar structure to ensure the proper rendering of your style and respect CSS specificity:</p> <h4 id=1-settings>1. Settings</h4> <p>Your website setting must be imported first and contain the variables, mixins and rules you will use in your style. Check the <a href="https://sass-lang.com/documentation/file.SASS_REFERENCE">Sass documentation</a> for a better usage of this tools.</p> <h4 id=2-vendors>2. Vendors</h4> <p>Import external stylesheets right after your website settings, and before any eventual setting overriding the default library configuration.</p> <p>Any stylesheet added with Yarn can be imported into your stylesheet files with an <code>@import</code> statement followed by the path relative to the <code>node_modules</code> folder.</p> <p>For instance, to load the grid style from <a href="https://www.npmjs.com/package/bootstrap">bootstrap</a>:</p> <div class=highlight><pre class="highlight-syntax scss"><code><span class="k">@import</span> <span class="s2">"bootstrap/scss/bootstrap-grid"</span><span class="p">;</span>
-</code></pre></div> <blockquote> <p>💡 You can also import stylesheets in your JavaScript files. Check the <a href="#importing-stylesheets">Yarn and webpack section</a></p> </blockquote> <h4 id=3-style>3. Style</h4> <p>The last files to be imported must contain the actual style of your website:</p> <ol> <li> <strong>Base</strong>: general style, typography, base elements</li> <li> <strong>Components</strong>: buttons, cards, lists, etc.</li> <li> <strong>Layouts</strong>: navbar, footer, sidebar, etc.</li> <li> <strong>Pages</strong>: custom styling per page</li> </ol> <h3 id=using-yarn-and-webpack>Using Yarn and webpack</h3> <p>The repository comes configured with <a href="https://yarnpkg.com"><strong>Yarn</strong></a>, <a href="https://webpack.js.org"><strong>webpack</strong></a> and the following loaders:</p> <ul> <li> <a href="https://babeljs.io">Babel</a> for JavaScript</li> <li> <a href="https://github.com/webpack-contrib/style-loader">style-loader</a>, <a href="https://github.com/webpack-contrib/css-loader">css-loader</a>, and <a href="https://github.com/webpack-contrib/sass-loader">sass-loader</a> for CSS and SCSS</li> </ul> <p>webpack has been integrated thanks to the in-built external pipeline extension (find the configuration in <code>config.rb</code>), that allows Middleman to run multiple subprocesses.</p> <p>Every time a server is run (in development or production), also the relative Yarn command gets executed (<code>yarn run start</code> or <code>yarn run build</code>), which runs, in turn, the right webpack process.</p> <blockquote> <p>💡 Want to set up your application with a different JavaScript pipeline? Have a look at the relative <a href="https://middlemanapp.com/advanced/external-pipeline">Middleman documentation</a></p> </blockquote> <h4 id=installing-packages>Installing packages</h4> <p>You can install a new package with the following command:</p> <div class=highlight><pre class="highlight-syntax shell"><code>yarn add &lt;package-name&gt; <span class="o">[</span><span class="nt">--dev</span><span class="o">]</span>
-</code></pre></div> <p>In your JavaScript files, import modules from a package with the <code>import</code> command:</p> <div class=highlight><pre class="highlight-syntax javascript"><code><span class="k">import</span> <span class="nx">tippy</span> <span class="k">from</span> <span class="s1">'tippy.js'</span><span class="p">;</span>
+</code></pre>
+            </div>
+            <blockquote>
+              <p>
+                💡 An example of this structure can be found in the
+                <a href="https://github.com/gabrielecanepa/middleman-webpack-www/tree/master/source/assets/stylesheets"
+                  >documentation website</a
+                >
+              </p>
+            </blockquote>
+            <p>
+              It&#39;s important to follow a similar structure to ensure the proper rendering of your style and respect
+              CSS specificity:
+            </p>
+            <h4 id="1-settings">1. Settings</h4>
+            <p>
+              Your website setting must be imported first and contain the variables, mixins and rules you will use in
+              your style. Check the
+              <a href="https://sass-lang.com/documentation/file.SASS_REFERENCE">Sass documentation</a> for a better
+              usage of this tools.
+            </p>
+            <h4 id="2-vendors">2. Vendors</h4>
+            <p>
+              Import external stylesheets right after your website settings, and before any eventual setting overriding
+              the default library configuration.
+            </p>
+            <p>
+              Any stylesheet added with Yarn can be imported into your stylesheet files with an
+              <code>@import</code> statement followed by the path relative to the <code>node_modules</code> folder.
+            </p>
+            <p>
+              For instance, the documentation website has been bundled with
+              <a href="https://www.npmjs.com/package/bootstrap">bootstrap</a>, and to load the grid style from the
+              package the following line was added to <code>all.css.scss</code>:
+            </p>
+            <div class="highlight">
+              <pre
+                class="highlight-syntax scss"
+              ><code><span class="k">@import</span> <span class="s2">"bootstrap/scss/bootstrap-grid"</span><span class="p">;</span>
+</code></pre>
+            </div>
+            <blockquote>
+              <p>
+                💡 You can also import stylesheets in your JavaScript files. Check the
+                <a href="#importing-stylesheets">Yarn and webpack section</a>
+              </p>
+            </blockquote>
+            <h4 id="3-style">3. Style</h4>
+            <p>The last files to be imported must contain the actual style of your website:</p>
+            <ol>
+              <li><strong>Base</strong>: general style, typography, base elements</li>
+              <li><strong>Components</strong>: buttons, cards, lists, etc.</li>
+              <li><strong>Layouts</strong>: navbar, footer, sidebar, etc.</li>
+              <li><strong>Pages</strong>: custom styling per page</li>
+            </ol>
+            <h3 id="using-yarn-and-webpack">Using Yarn and webpack</h3>
+            <p>
+              The repository comes configured with <a href="https://yarnpkg.com"><strong>Yarn</strong></a
+              >, <a href="https://webpack.js.org"><strong>webpack</strong></a> and the following loaders:
+            </p>
+            <ul>
+              <li><a href="https://babeljs.io">Babel</a> for JavaScript</li>
+              <li>
+                <a href="https://github.com/webpack-contrib/style-loader">style-loader</a>,
+                <a href="https://github.com/webpack-contrib/css-loader">css-loader</a>,
+                <a href="https://github.com/postcss/postcss-loader">postcss-loader</a> and
+                <a href="https://github.com/webpack-contrib/sass-loader">sass-loader</a> for CSS and SCSS
+              </li>
+            </ul>
+            <p>
+              webpack has been integrated thanks to the in-built external pipeline extension (find its configuration in
+              <code>config.rb</code>), that allows Middleman to run multiple subprocesses.
+            </p>
+            <p>
+              Every time a server is run (in development or production), also the relative Yarn command gets executed
+              (<code>yarn run start</code> or <code>yarn run build</code>), which runs, in turn, the right webpack
+              process.
+            </p>
+            <blockquote>
+              <p>
+                💡 Want to set up your application with a different JavaScript pipeline? Have a look at the relative
+                <a href="https://middlemanapp.com/advanced/external-pipeline">Middleman documentation</a>
+              </p>
+            </blockquote>
+            <h4 id="installing-packages">Installing packages</h4>
+            <p>You can install a new package with the following command:</p>
+            <div class="highlight">
+              <pre
+                class="highlight-syntax shell"
+              ><code>yarn add &lt;package-name&gt; <span class="o">[</span><span class="nt">--dev</span><span class="o">]</span>
+</code></pre>
+            </div>
+            <p>In your JavaScript files, import modules from a package with an <code>import</code> statement:</p>
+            <div class="highlight">
+              <pre
+                class="highlight-syntax javascript"
+              ><code><span class="k">import</span> <span class="nx">tippy</span> <span class="k">from</span> <span class="s2">"tippy.js"</span><span class="p">;</span>
 
 <span class="nx">tippy</span><span class="p">.</span><span class="nx">setDefaults</span><span class="p">({</span>
   <span class="na">arrow</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-  <span class="na">arrowType</span><span class="p">:</span> <span class="s1">'round'</span><span class="p">,</span>
+  <span class="na">arrowType</span><span class="p">:</span> <span class="s2">"round"</span><span class="p">,</span>
   <span class="na">duration</span><span class="p">:</span> <span class="p">[</span><span class="mi">275</span><span class="p">,</span> <span class="mi">200</span><span class="p">],</span>
   <span class="na">inertia</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">});</span>
-</code></pre></div> <h4 id=importing-stylesheets>Importing stylesheets</h4> <p>You can also import CSS and SCSS in your scripts by following the path relative to the <code>node_modules</code> folder.</p> <p>For example, to import the same Bootstrap grid style:</p> <div class=highlight><pre class="highlight-syntax javascript"><code><span class="k">import</span> <span class="s1">'bootstrap/scss/bootstrap-grid.scss'</span><span class="p">;</span>
-</code></pre></div> <blockquote> <p>💡 If you want to extract CSS/SCSS into separate files check the <a href="https://www.npmjs.com/package/mini-css-extract-plugin">mini-css-extractor-plugin</a></p> </blockquote> <h4 id=advanced-configuration>Advanced configuration</h4> <p>webpack it is capable of transforming, bundling, or packaging just about any resource or asset, but can be tricky to configure.</p> <p>If you want to understand and master a wide variety of tools and features that this tool offers, have a look at the <a href="https://webpack.js.org/guides">official webpack guides</a>.</p> <h3 id=images>Images</h3> <p>You can embed inline SVG icons in your views thanks to the <code>svg_tag</code> helper:</p> <div class=highlight><pre class="highlight-syntax ruby"><code><span class="n">svg_tag</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">attributes</span> <span class="o">=</span> <span class="p">{})</span>
-</code></pre></div> <p>The <code>file_name</code> has to be relative to your images folder. HTML <code>attributes</code> (id, class, title, etc.) can be specified directly with the helper.</p> <p>The biggest advantage of using inline SVGs is being able to have complete control over the different shapes using CSS and JavaScript (check the footer of the documentation website 😎).</p> <p>You can find an example in your <code>source/index.html.erb</code>:</p> <div class=highlight><pre class="highlight-syntax erb"><code><span class="cp">&lt;%=</span> <span class="n">svg_tag</span> <span class="s2">"logo.svg"</span><span class="p">,</span> <span class="ss">class: </span><span class="s2">"middleman-logo"</span> <span class="cp">%&gt;</span>
-</code></pre></div> <h3 id=building-and-deploying>Building and deploying</h3> <p>Finally, when you are ready to deliver static code, you will need to build the site. Using the command-line, from the project folder, run the corresponding Middleman command:</p> <div class=highlight><pre class="highlight-syntax shell"><code><span class="nv">$ </span>middleman build
-</code></pre></div> <p>This will create a static file for each file located in your source folder, compile your webpack bundles, and generate the specified favicons.</p> <p>Any enabled build-time features (such as minification and compression) will be executed. You can find the extensions already activated in the build-specific section of your <code>config.rb</code>.</p> <p>After building the site you will have everything you need within the <code>build</code> directory.</p> <p>A very handy tool to deploy a build is <a href="https://github.com/karlfreeman/middleman-deploy">middleman-deploy</a>. By default, it has been configured to deploy your website on <a href="https://pages.github.com">GitHub Pages</a> via the <code>gh-pages</code> branch, and build the static files before any new deployment.</p> <p>To activate the extension, simply run from your command-line:</p> <div class=highlight><pre class="highlight-syntax shell"><code><span class="nv">$ </span>middleman deploy
-</code></pre></div> <h2 id=extra>Extra</h2> <h3 id=testing-and-linters>Testing and linters</h3> <p>You can test your code thanks to the <a href="https://github.com/ruby/rake">Rake gem</a>, that allows to write tests and tasks in standard Ruby syntax.</p> <p>By default, 3 tasks have been defined, each one testing the style for a specific language (JavaScript, SCSS and Ruby). Run them with the <code>rake</code> command:</p> <p><img src="https://github.com/gabrielecanepa/assets/raw/master/middleman-webpack/screen3.png?sanitize=true" alt=Screen3 /></p> <p>If you use <a href="https://atom.io">Atom</a> as text editor, you can install <a href="https://atom.io/packages/linter-eslint">linter-eslint</a>, <a href="https://atom.io/packages/linter-rubocop">linter-rubocop</a> and <a href="https://atom.io/packages/linter-stylelint">linter-stylelint</a> to check your style while you type. If you use <a href="https://www.sublimetext.com">Sublime Text</a>, have a look at the <a href="https://packagecontrol.io/packages/ESLint">ESLint</a>, <a href="https://packagecontrol.io/packages/RuboCop">RuboCop</a> and <a href="https://packagecontrol.io/packages/SublimeLinter-stylelint">stylelint</a> packages.</p> <h3 id=404-page>404 page</h3> <p>A simple 404 page has already been provided. Use it to display a custom page when visitors attempt to access paths that you haven&#39;t defined:</p> <p><img src="https://github.com/gabrielecanepa/assets/raw/master/middleman-webpack/screen4.png?sanitize=true" alt=Screen4 /></p> <h2 id=contributing>Contributing</h2> <ol> <li> <a href="https://github.com/gabrielecanepa/middleman-webpack">Fork the repository</a></li> <li> Create your feature branch (<code>git checkout -b my-new-feature</code>)</li> <li> Commit your changes (<code>git commit -m &quot;Add some feature&quot;</code>)</li> <li> Push to the branch (<code>git push origin my-new-feature</code>)</li> <li> Create a new pull request</li> </ol> </main> </div> </div> </div> <footer> <svg class=avatar id=avatar-footer version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 255.5 325.6"> <style>
-		.avatar0 { fill: #FEDAC6 }
-		.avatar1 { fill: #F5C4B0 }
-		.avatar2 { fill: #E5B350 }
-		.avatar3 { fill: #C2853B }
-		.avatar4 {
-			fill: #FFFFFF;
-			stroke: #000000;
-			stroke-: 10;
-			stroke-linejoin: round;
-			stroke-miterlimit: 10;
-		}
-	</style> <g> <path class=avatar0 d="M221.5,155.2H213v51.1h8.5c14.1,0,25.5-11.4,25.5-25.6S235.6,155.2,221.5,155.2L221.5,155.2z"/> <path class=avatar1 d="M8.5,180.8c0,14.1,11.4,25.6,25.6,25.6l0,0h8.5v-51.1h-8.5c-14.1,0-25.5,11.3-25.6,25.3V180.8z"/> <path class=avatar2 d="M221.5,155.2l10.1-51.7c3.3-19.6-10-38.2-29.6-41.5c-2-0.3-4-0.5-6-0.5 c-5.1-15.2-19.3-25.5-35.4-25.6h-101l-17-25.5l-8.5,8.5c-23.5,23.5-23.5,61.7,0,85.2h153.4L221.5,155.2z"/> <path class=avatar0 d="M221.5,155.2v48.6c0,24-6.1,47.7-17.8,68.7c-23.4,41.9-76.3,57-118.2,33.6 c-14.1-7.9-25.7-19.5-33.6-33.6c-11.7-21-17.8-44.7-17.8-68.7v-99.7h153.4L221.5,155.2z"/> <path class=avatar1 d="M68.1,104.1H34v99.7c0,24,6.1,47.7,17.8,68.7c8.5,15.3,21.4,27.6,37.1,35.3 C59.6,223.4,68.1,104.1,68.1,104.1z"/> <path class=avatar3 d="M18.2,47.2c-5,20.4,0.9,42,15.8,56.9h136.3C73.6,104.1,34,70,18.2,47.2z"/> <path d="M221.5,214.9H213v-17h8.5c9.4,0,17-7.6,17-17s-7.6-17-17-17H213v-17h8.5c18.8,0,34,15.2,34,34 S240.3,214.9,221.5,214.9z"/> <path d="M42.6,214.9h-8.5C15.3,214.9,0,199.7,0,180.8c0-18.8,15.3-34.1,34.1-34.1h8.5v17h-8.5c-9.4,0-17,7.6-17,17 s7.6,17,17,17h8.5V214.9z"/> <path d="M136.3,231.9h-25.6c-2.7,0-5.2-1.3-6.8-3.4c-1.6-2.2-2.1-4.9-1.4-7.5l17-59.6l16.4,4.7L122,214.9h14.3V231.9 z"/> <path d="M127.8,325.6L127.8,325.6c-34.6,0-66.5-18.8-83.4-49c-12.3-22.3-18.9-47.3-18.9-72.8v-99.7 c0-4.7,3.8-8.5,8.5-8.5l0,0h153.4c2.9,0,5.5,1.4,7.1,3.8l34.1,51.1c0.9,1.4,1.4,3,1.4,4.7v48.6c0,25.5-6.5,50.5-18.9,72.8 C194.3,306.9,162.4,325.7,127.8,325.6z M127.8,308.6L127.8,308.6c28.5,0,54.7-15.4,68.5-40.3c10.9-19.7,16.7-41.9,16.7-64.5v-46 l-30.1-45.2H42.6v91.2c0,22.6,5.8,44.8,16.7,64.5C73.1,293.2,99.3,308.7,127.8,308.6z"/> <circle cx="76.7" cy="172.3" r=17 /> <circle cx="178.9" cy="172.3" r=17 /> <path d="M229.9,165.2l-16.8-2.8l10.1-60.2c2.5-15-7.5-29.1-22.5-31.7h-0.1c-1.5-0.3-3.1-0.4-4.6-0.4l0,0 c-3.7,0-6.9-2.3-8.1-5.8c-3.9-11.8-15-19.8-27.4-19.8H59.6c-2.9,0-5.5-1.4-7.1-3.8L41.2,23.8L40,25c-20.1,20.2-20.1,52.9,0,73.1 l-12,12.1C1.2,83.3,1.2,39.8,28,12.9l8.5-8.5c1.8-1.8,4.3-2.7,6.9-2.5c2.5,0.2,4.8,1.6,6.2,3.7l14.5,21.8h96.3 c17.6,0,33.6,10.1,41.3,25.9c0.5,0.1,1,0.1,1.6,0.2c24.2,4.1,40.6,27,36.6,51.3L229.9,165.2z"/> <path id=avatar-mouth-1 style="display: block" d="M120.7,266h-10v-17h10c13.2,0,25.8-5.2,35.1-14.6l12,12.1C155.4,259.1,138.4,266.1,120.7,266z"/> <g id=avatar-mouth-2 style="display: none"> <path class=avatar4 d="M164.7,246.6H96.8c-1,18.8,13.4,34.8,32.1,35.8s34.8-13.4,35.8-32.1C164.8,249.1,164.8,247.9,164.7,246.6z"/> <path d="M129.6,284c-19.7,0-35.9-16.8-35.9-37.4c0-1.7,1.3-3.1,3-3.1h65.7c1.7,0,3,1.4,3,3.1C165.4,267.3,149.3,284,129.6,284z M103.7,249.8c0.8,15.4,9.1,24.8,24.6,24.8s23.2-7.2,26.7-22.2l-51.8,0.7L103.7,249.8z"/> </g> </g> </svg> <code> © 2019 <a href="https://gabriele.canepa.io" target=_blank>Gabriele Canepa</a> </code> <code> Built with <a href="https://github.com/gabrielecanepa/middleman-webpack-www" target=_blank>Middleman webpack</a> </code> <code> <a href="mailto:gabriele@canepa.io">Contact</a> </code> <code> <a href="https://github.com/gabrielecanepa" target=_blank>Github</a> </code> </footer> <script src="main.bundle-024c778b.js"></script> <script src="docs.bundle-3f203ace.js"></script> </body> </html>
+</code></pre>
+            </div>
+            <h4 id="importing-stylesheets">Importing stylesheets</h4>
+            <p>
+              You can also import CSS and SCSS in your scripts by following the path relative to the
+              <code>node_modules</code> folder.
+            </p>
+            <p>For example, to import the default grid style from Bootstrap:</p>
+            <div class="highlight">
+              <pre
+                class="highlight-syntax javascript"
+              ><code><span class="k">import</span> <span class="s2">"bootstrap/scss/_bootstrap-grid.scss"</span><span class="p">;</span>
+</code></pre>
+            </div>
+            <blockquote>
+              <p>
+                💡 If you want to extract CSS/SCSS into separate files check the
+                <a href="https://www.npmjs.com/package/mini-css-extract-plugin">mini-css-extractor-plugin</a>
+              </p>
+            </blockquote>
+            <h4 id="advanced-configuration">Advanced configuration</h4>
+            <p>
+              webpack it is capable of transforming, bundling, or packaging just about any resource or asset, but can be
+              tricky to configure.
+            </p>
+            <p>
+              If you want to understand and master a wide variety of tools and features that this tool offers, have a
+              look at the <a href="https://webpack.js.org/guides">official webpack guides</a>.
+            </p>
+            <h3 id="images">Images</h3>
+            <p>You can embed inline SVG icons in your views thanks to the <code>svg_tag</code> helper:</p>
+            <div class="highlight">
+              <pre
+                class="highlight-syntax ruby"
+              ><code><span class="n">svg_tag</span><span class="p">(</span><span class="n">file_name</span><span class="p">,</span> <span class="n">attributes</span> <span class="o">=</span> <span class="p">{})</span>
+</code></pre>
+            </div>
+            <p>
+              The <code>file_name</code> has to be relative to your images folder. HTML <code>attributes</code> (id,
+              class, title, etc.) can be specified directly in the helper.
+            </p>
+            <p>
+              The biggest advantage of using inline SVGs is being able to have complete control over the different
+              shapes using CSS and JavaScript (check the footer of the documentation website 😎).
+            </p>
+            <p>
+              You can find an example of embedding an SVG document and applying a class attribute in your
+              <code>source/index.html.erb</code>:
+            </p>
+            <div class="highlight">
+              <pre
+                class="highlight-syntax erb"
+              ><code><span class="cp">&lt;%=</span> <span class="n">svg_tag</span> <span class="s2">"logo.svg"</span><span class="p">,</span> <span class="ss">class: </span><span class="s2">"middleman-logo"</span> <span class="cp">%&gt;</span>
+</code></pre>
+            </div>
+            <h3 id="building-and-deploying">Building and deploying</h3>
+            <p>
+              Finally, when you are ready to deliver static code, you will need to build the site. Using the
+              command-line, from the project folder, run the correspondent Middleman command:
+            </p>
+            <div class="highlight">
+              <pre class="highlight-syntax shell"><code><span class="nv">$ </span>middleman build
+</code></pre>
+            </div>
+            <p>
+              This will create a static file for each file located in your source folder, compile your webpack bundles,
+              and generate the specified favicons.
+            </p>
+            <p>
+              Any enabled build-time features (such as minification and compression) will be executed. You can find the
+              extensions activated by default in the build-specific section of your <code>config.rb</code>.
+            </p>
+            <p>After building the site you will have everything you need within the <code>build</code> directory.</p>
+            <p>
+              A very handy tool to deploy a build is
+              <a href="https://github.com/karlfreeman/middleman-deploy">middleman-deploy</a>. By default, it has been
+              configured to deploy your website on <a href="https://pages.github.com">GitHub Pages</a> via the
+              <code>gh-pages</code> branch, and build the static files before any new deployment.
+            </p>
+            <p>To activate the extension, simply run from your command-line:</p>
+            <div class="highlight">
+              <pre class="highlight-syntax shell"><code><span class="nv">$ </span>middleman deploy
+</code></pre>
+            </div>
+            <h2 id="extra">Extra</h2>
+            <h3 id="testing-and-linters">Testing and linters</h3>
+            <p>
+              You can test your code thanks to the <a href="https://github.com/ruby/rake">Rake gem</a>, allowing to
+              write tests and tasks in standard Ruby syntax.
+            </p>
+            <p>
+              By default, 3 tasks have been defined, each one testing the style for a specific language (JavaScript,
+              SCSS and Ruby). Run them with the <code>rake</code> command:
+            </p>
+            <p><img src="assets/images/screen3.png" alt="" /></p>
+            <p>
+              If you use <a href="https://atom.io">Atom</a> as text editor, you can install
+              <a href="https://atom.io/packages/linter-eslint">linter-eslint</a>,
+              <a href="https://atom.io/packages/linter-rubocop">linter-rubocop</a> and
+              <a href="https://atom.io/packages/linter-stylelint">linter-stylelint</a> to check your style while you
+              write code. If you use <a href="https://www.sublimetext.com">Sublime Text</a>, have a look at the
+              <a href="https://packagecontrol.io/packages/ESLint">ESLint</a>,
+              <a href="https://packagecontrol.io/packages/RuboCop">RuboCop</a> and
+              <a href="https://packagecontrol.io/packages/SublimeLinter-stylelint">stylelint</a> packages.
+            </p>
+            <h3 id="404-page">404 page</h3>
+            <p>
+              A simple 404 page has already been provided. Use it to display a custom page when visitors attempt to
+              access paths that don’t exist:
+            </p>
+            <p><img src="assets/images/screen4.png" alt="" /></p>
+            <h2 id="contributing">Contributing</h2>
+            <ol>
+              <li><a href="https://github.com/gabrielecanepa/middleman-webpack">Fork the repository</a></li>
+              <li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
+              <li>Commit your changes (<code>git commit -m &quot;Add some feature&quot;</code>)</li>
+              <li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
+              <li>Create a new pull request</li>
+            </ol>
+          </main>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <svg
+        class="avatar"
+        id="avatar-footer"
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        viewBox="0 0 255.5 325.6"
+      >
+        <style>
+          .avatar0 {
+            fill: #fedac6;
+          }
+          .avatar1 {
+            fill: #f5c4b0;
+          }
+          .avatar2 {
+            fill: #e5b350;
+          }
+          .avatar3 {
+            fill: #c2853b;
+          }
+          .avatar4 {
+            fill: #ffffff;
+            stroke: #000000;
+            stroke-: 10;
+            stroke-linejoin: round;
+            stroke-miterlimit: 10;
+          }
+          #avatar-mouth-2 {
+            display: none;
+          }
+        </style>
+        <g>
+          <path
+            class="avatar0"
+            d="M221.5,155.2H213v51.1h8.5c14.1,0,25.5-11.4,25.5-25.6S235.6,155.2,221.5,155.2L221.5,155.2z"
+          />
+          <path
+            class="avatar1"
+            d="M8.5,180.8c0,14.1,11.4,25.6,25.6,25.6l0,0h8.5v-51.1h-8.5c-14.1,0-25.5,11.3-25.6,25.3V180.8z"
+          />
+          <path
+            class="avatar2"
+            d="M221.5,155.2l10.1-51.7c3.3-19.6-10-38.2-29.6-41.5c-2-0.3-4-0.5-6-0.5 c-5.1-15.2-19.3-25.5-35.4-25.6h-101l-17-25.5l-8.5,8.5c-23.5,23.5-23.5,61.7,0,85.2h153.4L221.5,155.2z"
+          />
+          <path
+            class="avatar0"
+            d="M221.5,155.2v48.6c0,24-6.1,47.7-17.8,68.7c-23.4,41.9-76.3,57-118.2,33.6 c-14.1-7.9-25.7-19.5-33.6-33.6c-11.7-21-17.8-44.7-17.8-68.7v-99.7h153.4L221.5,155.2z"
+          />
+          <path
+            class="avatar1"
+            d="M68.1,104.1H34v99.7c0,24,6.1,47.7,17.8,68.7c8.5,15.3,21.4,27.6,37.1,35.3 C59.6,223.4,68.1,104.1,68.1,104.1z"
+          />
+          <path class="avatar3" d="M18.2,47.2c-5,20.4,0.9,42,15.8,56.9h136.3C73.6,104.1,34,70,18.2,47.2z" />
+          <path
+            d="M221.5,214.9H213v-17h8.5c9.4,0,17-7.6,17-17s-7.6-17-17-17H213v-17h8.5c18.8,0,34,15.2,34,34 S240.3,214.9,221.5,214.9z"
+          />
+          <path
+            d="M42.6,214.9h-8.5C15.3,214.9,0,199.7,0,180.8c0-18.8,15.3-34.1,34.1-34.1h8.5v17h-8.5c-9.4,0-17,7.6-17,17 s7.6,17,17,17h8.5V214.9z"
+          />
+          <path
+            d="M136.3,231.9h-25.6c-2.7,0-5.2-1.3-6.8-3.4c-1.6-2.2-2.1-4.9-1.4-7.5l17-59.6l16.4,4.7L122,214.9h14.3V231.9 z"
+          />
+          <path
+            d="M127.8,325.6L127.8,325.6c-34.6,0-66.5-18.8-83.4-49c-12.3-22.3-18.9-47.3-18.9-72.8v-99.7 c0-4.7,3.8-8.5,8.5-8.5l0,0h153.4c2.9,0,5.5,1.4,7.1,3.8l34.1,51.1c0.9,1.4,1.4,3,1.4,4.7v48.6c0,25.5-6.5,50.5-18.9,72.8 C194.3,306.9,162.4,325.7,127.8,325.6z M127.8,308.6L127.8,308.6c28.5,0,54.7-15.4,68.5-40.3c10.9-19.7,16.7-41.9,16.7-64.5v-46 l-30.1-45.2H42.6v91.2c0,22.6,5.8,44.8,16.7,64.5C73.1,293.2,99.3,308.7,127.8,308.6z"
+          />
+          <circle cx="76.7" cy="172.3" r="17" />
+          <circle cx="178.9" cy="172.3" r="17" />
+          <path
+            d="M229.9,165.2l-16.8-2.8l10.1-60.2c2.5-15-7.5-29.1-22.5-31.7h-0.1c-1.5-0.3-3.1-0.4-4.6-0.4l0,0 c-3.7,0-6.9-2.3-8.1-5.8c-3.9-11.8-15-19.8-27.4-19.8H59.6c-2.9,0-5.5-1.4-7.1-3.8L41.2,23.8L40,25c-20.1,20.2-20.1,52.9,0,73.1 l-12,12.1C1.2,83.3,1.2,39.8,28,12.9l8.5-8.5c1.8-1.8,4.3-2.7,6.9-2.5c2.5,0.2,4.8,1.6,6.2,3.7l14.5,21.8h96.3 c17.6,0,33.6,10.1,41.3,25.9c0.5,0.1,1,0.1,1.6,0.2c24.2,4.1,40.6,27,36.6,51.3L229.9,165.2z"
+          />
+          <path
+            id="avatar-mouth-1"
+            d="M120.7,266h-10v-17h10c13.2,0,25.8-5.2,35.1-14.6l12,12.1C155.4,259.1,138.4,266.1,120.7,266z"
+          />
+          <g id="avatar-mouth-2">
+            <path
+              class="avatar4"
+              d="M164.7,246.6H96.8c-1,18.8,13.4,34.8,32.1,35.8s34.8-13.4,35.8-32.1C164.8,249.1,164.8,247.9,164.7,246.6z"
+            />
+            <path
+              d="M129.6,284c-19.7,0-35.9-16.8-35.9-37.4c0-1.7,1.3-3.1,3-3.1h65.7c1.7,0,3,1.4,3,3.1C165.4,267.3,149.3,284,129.6,284z M103.7,249.8c0.8,15.4,9.1,24.8,24.6,24.8s23.2-7.2,26.7-22.2l-51.8,0.7L103.7,249.8z"
+            />
+          </g>
+        </g>
+      </svg>
+      <code> © 2019 <a href="https://gabrielecanepa.com" target="_blank">Gabriele Canepa</a> </code>
+      <code>
+        Built with
+        <a href="https://github.com/gabrielecanepa/middleman-webpack" target="_blank">Middleman webpack</a>
+      </code>
+      <code> <a href="mailto:hello@gabrielecanepa.com">Contact</a> </code>
+      <code> <a href="https://github.com/gabrielecanepa" target="_blank">Github</a> </code>
+    </footer>
+    <script src="main.bundle-42281e2d.js"></script>
+    <script src="docs.bundle-876c9c6d.js"></script>
+  </body>
+</html>
